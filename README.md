@@ -1,11 +1,11 @@
 ---
 layout: home
-title: INF721 - Deep Learning
+title: ADA - Analise and Design of Algorithms
 nav_exclude: true
 permalink: /:path/
 seo:
   type: Course
-  name: INF721 - Deep Learning
+  name: ADA - Analise and Design of Algorithms
 ---
 
 ## INF721 - Deep Learning (2024/2)
