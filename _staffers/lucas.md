@@ -1,6 +1,6 @@
 ---
 name: Herminio Paucar C.
-role: Professor
+role: Instructor
 email: hpaucarc@unmsm.edu.pe
 website: https://hpaucar.github.io
 photo: herminio.jpg
