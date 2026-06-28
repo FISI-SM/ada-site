@@ -9,7 +9,7 @@ lectures_hours: CCE416, Segunda-feira, 14:00-15:40h<br>CCE416, Quarta-feira, 16:
 labs_hours: CCE408, Quarta-feira, 16-18h
 
 baseurl: "/ada-site/" # the subpath of your site, e.g. /blog/
-url: "https://lucasnfe.github.io" # the base hostname & protocol for your site
+url: "https://FISI-SM.github.io" # the base hostname & protocol for your site
 
 schoolname: "Universidade Federal de Viçosa"
 schoolurl: "https://www.ufv.br"
