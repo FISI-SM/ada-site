@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: UFV - INF721
-tagline: Deep Learning
-description: Welcome to INF721 - Deep Learning!
-author: Lucas N. Ferreira
+title: ADA - FISI - UNMSM
+tagline: Analise and Design of Algorithms
+description: Welcome to  ADA Course!
+author: Prof. Herminio Paucar Curasma
 baseurl: 'ada-site/' # the subpath of your site, e.g. /blog
 url: 'https://FISI-SM.github.io/' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
@@ -28,12 +28,12 @@ search_enabled: true
 heading_anchors: true
 permalink: pretty
 aux_links:
-  Lucas N. Ferreira:
-    - 'https://www.lucasnferreira.com'
-  PPGCC:
-    - 'https://ppgcc.ufv.br'    
+  Herminio Paucar C:
+    - 'https://hpaucar.github.io'
+  FISI:
+    - 'https://sistemas.unmsm.edu.pe'    
   Universidade Federal de Viçosa:
-    - 'https://www.ufv.br'
+    - 'https://www.unmsm.edu.pe'
 footer_content:
 
 # Collections for website data
