@@ -1,0 +1,28 @@
+items:
+- url: /
+  name: Home
+  icon_class: fa
+
+- url: /programa/
+  name: Programa
+  icon_class: fas
+
+- url: /calendario/
+  name: Calendário
+  icon_class: fas 
+
+- url: /aulas/
+  name: Aulas
+  icon_class: fas 
+
+- url: /avaliacao/
+  name: Avaliação
+  icon_class: fas 
+
+- url: /projetos/
+  name: Projetos
+  icon_class: fas   
+
+- url: /materiais/
+  name: Materiais
+  icon_class: fas 

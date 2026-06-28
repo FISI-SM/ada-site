@@ -1,0 +1,61 @@
+# Site settings
+course_name: INF721 - Aprendizado em Redes Neurais Profundas
+course_description: "Essa disciplina é uma introdução aos fundamentos e técnicas modernas de Deep Learning, com o objetivo de possibilitar aos alunos projetar e implementar redes neurais profundas para classificação, regressão e geração de dados não-estruturados (imagens, texto, áudio, etc)."
+course_semester: "2023/2"
+
+semester_start: 2023-08-14T08:00
+semester_end: 2023-12-04T08:00
+lectures_hours: CCE416, Segunda-feira, 14:00-15:40h<br>CCE416, Quarta-feira, 16:00-17:40h
+labs_hours: CCE408, Quarta-feira, 16-18h
+
+baseurl: "/ufv-inf721/" # the subpath of your site, e.g. /blog/
+url: "https://lucasnfe.github.io" # the base hostname & protocol for your site
+
+schoolname: "Universidade Federal de Viçosa"
+schoolurl: "https://www.ufv.br"
+twitter_username: lucasnfe 
+
+address: |
+    Departamento de Informática
+    Universidade Federal de Viçosa
+    Viçosa, MG, Brasil
+
+# Set your Google Analytics tracking ID (set up yours at http://www.google.com/analytics/)
+# google_analytics: UA-XXXXXXXX-X
+
+### Do not change the followings unless you know what you are doing ###
+
+# Build settings
+markdown: kramdown
+
+# Other options
+permalink: blog/:year/:month/:title
+excerpt_separator: "<!--more-->"
+
+include: ['_images', '_css']
+exclude: ['develop']
+
+dateformat: "%d/%m/%Y"
+date_locale: pt
+
+future: true
+collections:
+    events:
+        output: true
+    lectures:
+        output: true
+    assignments:
+        output: true
+    projects:
+        output: true
+    quizzes:
+        output: true
+    announcements:
+        output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "assignments"
+    values:
+      layout: "assignment"
