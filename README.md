@@ -8,19 +8,25 @@ seo:
   name: ADA - Analise and Design of Algorithms
 ---
 
-## INF721 - Deep Learning (2024/2)
+## ADA - Analise and Design of Algorithms
 
-This course introduces students to the fundamentals and modern techniques of Deep Learning, aiming at enabling students to design and implement deep neural networks for classification, regression, and generation of unstructured data.
+### Course Description
+
+The goal of this course is to provide graduate students in Computer Science with a solid theoretical and practical foundation in the design and analysis of algorithms, preparing them to solve complex computational problems and conduct research in advanced algorithmic techniques.
+
+This course presents the fundamental principles of algorithm design, correctness, and computational complexity, covering both classical and modern paradigms. Students will develop the ability to analyze the efficiency of algorithms, prove their correctness, and design scalable solutions for challenging computational problems. Topics include asymptotic analysis, divide and conquer, dynamic programming, greedy algorithms, backtracking, graph algorithms, randomized algorithms, approximation algorithms, and advanced optimization techniques.
+
+This course serves as an essential foundation for advanced studies and research in areas such as Artificial Intelligence, Data Science, Bioinformatics, Operations Research, High-Performance Computing, Distributed Systems, and Algorithm Engineering.
 
 ## Announcements
 
 {% assign announcements = site.announcements %}
 {{ announcements.last }}
 
-## Lectures
+## Lectures 2026.2
 
-- Mondays 2:00-3:40pm, CCE406
-- Wednesdays 4:00-5:40pm, CCE406
+- Mondays 0:00-0:00pm, LAB NP 6
+- Wednesdays 0:00-0:00pm, LAB NP 6
 
 ## Instructor
 
