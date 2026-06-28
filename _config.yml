@@ -1,61 +1,77 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole site, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-course_name: INF721 - Aprendizado em Redes Neurais Profundas
-course_description: "Essa disciplina é uma introdução aos fundamentos e técnicas modernas de Deep Learning, com o objetivo de possibilitar aos alunos projetar e implementar redes neurais profundas para classificação, regressão e geração de dados não-estruturados (imagens, texto, áudio, etc)."
-course_semester: "2023/2"
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: UFV - INF721
+tagline: Deep Learning
+description: Welcome to INF721 - Deep Learning!
+author: Lucas N. Ferreira
+baseurl: 'ada-site/' # the subpath of your site, e.g. /blog
+url: 'https://FISI-SM.github.io/' # the base hostname & protocol for your site, e.g. http://example.com
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
-semester_start: 2023-08-14T08:00
-semester_end: 2023-12-04T08:00
-lectures_hours: CCE416, Segunda-feira, 14:00-15:40h<br>CCE416, Quarta-feira, 16:00-17:40h
-labs_hours: CCE408, Quarta-feira, 16-18h
+# Theme settings
+remote_theme: just-the-docs/just-the-docs@v0.7.0
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+permalink: pretty
+aux_links:
+  Lucas N. Ferreira:
+    - 'https://www.lucasnferreira.com'
+  PPGCC:
+    - 'https://ppgcc.ufv.br'    
+  Universidade Federal de Viçosa:
+    - 'https://www.ufv.br'
+footer_content:
 
-baseurl: "/ada-site/" # the subpath of your site, e.g. /blog/
-url: "https://FISI-SM.github.io" # the base hostname & protocol for your site
-
-schoolname: "Universidade Federal de Viçosa"
-schoolurl: "https://www.ufv.br"
-twitter_username: lucasnfe 
-
-address: |
-    Departamento de Informática
-    Universidade Federal de Viçosa
-    Viçosa, MG, Brasil
-
-# Set your Google Analytics tracking ID (set up yours at http://www.google.com/analytics/)
-# google_analytics: UA-XXXXXXXX-X
-
-### Do not change the followings unless you know what you are doing ###
-
-# Build settings
-markdown: kramdown
-
-# Other options
-permalink: blog/:year/:month/:title
-excerpt_separator: "<!--more-->"
-
-include: ['_images', '_css']
-exclude: ['develop']
-
-dateformat: "%d/%m/%Y"
-date_locale: pt
-
-future: true
+# Collections for website data
 collections:
-    events:
-        output: true
-    lectures:
-        output: true
-    assignments:
-        output: true
-    projects:
-        output: true
-    quizzes:
-        output: true
-    announcements:
-        output: false
-
+  staffers:
+  modules:
+  schedules:
+  announcements:
+# Default layouts for each collection type
 defaults:
   - scope:
-      path: ""
-      type: "assignments"
+      path: ''
+      type: staffers
     values:
-      layout: "assignment"
+      layout: staffer
+      height: 300
+      subpath: '/assets/images/'
+      width: 300
+  - scope:
+      path: ''
+      type: modules
+    values:
+      layout: module
+  - scope:
+      path: ''
+      type: schedules
+    values:
+      layout: schedule
+  - scope:
+      path: ''
+      type: announcements
+    values:
+      layout: announcement
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
