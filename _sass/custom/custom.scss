@@ -724,15 +724,42 @@ table.schedule {
 }
 
 .announcement {
+  position: relative;
   background: $table-background-color;
   border: 1px solid $border-color;
+  border-left: 3px solid $link-color;
+  border-radius: $border-radius;
   box-shadow: none;
   padding: $sp-4 $sp-5;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  }
+
+  .announcement-head {
+    display: flex;
+    align-items: center;
+    gap: $sp-2;
+  }
+
+  .announcement-ico {
+    display: inline-flex;
+    color: $link-color;
+
+    .icon-svg {
+      width: 1.05rem;
+      height: 1.05rem;
+    }
+  }
 
   h1,
   h2 {
-    margin-top: 0;
-    margin-bottom: 4px;
+    margin: 0;
     padding-bottom: 0;
     border-bottom: none;
     font-size: 1.1rem;
@@ -741,12 +768,12 @@ table.schedule {
 
   .announcement-meta {
     display: block;
-    margin-bottom: $sp-3;
+    margin: 4px 0 $sp-3;
     color: $search-result-preview-color;
     font-size: 0.76rem;
   }
 
-  > div > :last-child {
+  .announcement-body > :last-child {
     margin-bottom: 0;
   }
 }
