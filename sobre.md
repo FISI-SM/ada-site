@@ -11,29 +11,20 @@ The goal of this course is to provide graduate students in Computer Science with
 
 ## Prerequisites
 
-- INF213: Data Structures
-- MAT135: Analytic Geometry and Linear Algebra
-- MAT140: Calculus I
+{% include cards.html data="prerequisites" %}
 
-It is expected that students are comfortable with (1) programming in Python, (2) fundamental operations with vectors and matrices, and (3) derivatives of composite and multivariable functions. Additionally, it is expected that students are familiar with fundamental data structures, as well as the classical algorithms associated with them.
+{: .important }
+> It is expected that students are comfortable with (1) programming in Python, (2) fundamental operations with vectors and matrices, and (3) derivatives of composite and multivariable functions. Additionally, it is expected that students are familiar with fundamental data structures, as well as the classical algorithms associated with them.
 
 ## Content
 
-- ⁠Introduction 
-- ⁠Supervised Learning
-- ⁠Shallow Neural Networks
-- ⁠Deep Neural Networks
-- ⁠Improving Performance of Neural Networks
-- ⁠Recurrent Neural Networks
-- ⁠Convolutional Neural Networks
-- ⁠Attention Mechanisms
-- ⁠Generative Models
+{% include cards.html data="content" %}
 
 ## Late Policy
 
-- **Programming Assignments and Final Project**:
-    - 15% penalty for each day of delay
-    - Each delay can be for a maximum of 2 days
+| Item | Penalty | Maximum delay |
+|---|---|---|
+| Programming Assignments & Final Project | 15% for each day of delay | 2 days |
 
-- **Quizzes**:
-    - If you need to miss a quiz, notify the instructor in advance so that another date can be scheduled.
+{: .warning }
+> **Quizzes.** If you need to miss a quiz, notify the instructor in advance so that another date can be scheduled.

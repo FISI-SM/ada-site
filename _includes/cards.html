@@ -1,0 +1,19 @@
+{%- assign groups = site.data[include.data] -%}
+{%- for group in groups -%}
+{%- if group.heading %}<h2 id="{{ group.heading | slugify }}">{{ group.heading }}{% if group.weight %} ({{ group.weight }}){% endif %}</h2>{% endif -%}
+{%- if group.description %}<p>{{ group.description }}</p>{% endif -%}
+<div class="cards-grid {{ include.class }}">
+{%- for item in group.items -%}
+{%- if item.url -%}<a class="feature-card" href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>{%- else -%}<div class="feature-card{% if item.status %} is-disabled{% endif %}">{%- endif -%}
+{%- assign ico = item.icon | default: group.icon -%}
+{%- if ico %}<span class="card-ico">{% include icon.html name=ico %}</span>{% endif -%}
+{%- if item.pct %}<span class="card-pct">{{ item.pct }}</span>{% endif -%}
+{%- if item.tag %}<span class="card-tag">{{ item.tag }}</span>{% endif -%}
+{%- if item.num %}<span class="card-num">{{ item.num }}</span>{% endif -%}
+<span class="card-title">{{ item.title }}</span>
+{%- if item.source %}<span class="card-desc">{{ item.source }}</span>{% endif -%}
+{%- if item.status %}<span class="card-status">{{ item.status }}</span>{% endif -%}
+{%- if item.url %}</a>{% else %}</div>{% endif -%}
+{%- endfor -%}
+</div>
+{%- endfor -%}

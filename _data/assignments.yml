@@ -1,0 +1,45 @@
+- items:
+    - pct: 40%
+      title: Exams
+    - pct: 40%
+      title: Programming Assignments
+    - pct: 20%
+      title: Final Project
+
+- heading: Exams
+  weight: 40%
+  description: A list of (mostly multiple choice) questions taken in the classroom with a duration of 1:40h.
+  items:
+    - title: Midterm Exam 1
+    - title: Midterm Exam 2
+
+- heading: Programming Assignments
+  weight: 40%
+  description: Implementing neural models in Python and Jupyter Notebook using pre-defined classic datasets, with a duration of 1-2 weeks.
+  items:
+    - tag: PA1
+      title: Logistic Regression
+      url: /assignments/pa1-logistic-regression
+    - tag: PA2
+      title: Multilayer Perceptron
+      url: /assignments/pa2-multilayer-perceptron
+    - tag: PA3
+      title: Convolutional Neural Networks
+      url: /assignments/pa3-cnn
+    - tag: PA4
+      title: Recurrent Neural Networks
+      url: /assignments/pa4-rnn
+
+- heading: Final Project
+  weight: 20%
+  description: Proposal, implementation, and evaluation of a transformer model for a learning problem of interest to the students, conducted individually or in pairs, with an approximate duration of 4 weeks.
+  items:
+    - tag: FP1
+      title: Project Proposal
+      url: /assignments/fp1-project-proposal
+    - tag: FP2
+      title: Project Implementation
+      status: Coming soon
+    - tag: FP3
+      title: Project Presentation
+      url: /assignments/fp3-project-presentation
