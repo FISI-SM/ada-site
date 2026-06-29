@@ -616,3 +616,103 @@ summary {
   border-radius: $border-radius;
   border-left-width: 4px;
 }
+.cards-grid a.feature-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cards-grid a.feature-card:hover {
+  text-decoration: none;
+}
+
+.feature-card.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.feature-card .card-emoji {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.feature-card .card-pct {
+  font-family: $mono-font-family;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $link-color;
+}
+
+.feature-card .card-status {
+  align-self: flex-start;
+  margin-top: 2px;
+  padding: 1px 8px;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: $search-result-preview-color;
+  background: $feedback-color;
+  border-radius: 999px;
+}
+
+.quick-links {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  a.feature-card {
+    flex-direction: row;
+    align-items: center;
+    gap: $sp-3;
+    font-weight: 600;
+    color: $body-heading-color;
+  }
+}
+
+.schedule-scroll {
+  margin: $sp-4 0;
+  max-height: 80vh;
+  overflow: auto;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+}
+
+table.schedule {
+  margin: 0;
+  min-width: 760px;
+  border: none;
+  border-radius: 0;
+
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: $sidebar-color;
+  }
+
+  td,
+  th {
+    vertical-align: top;
+  }
+
+  b {
+    color: $link-color;
+  }
+
+  td a {
+    display: inline-block;
+    margin: 2px 4px 2px 0;
+    padding: 1px 9px;
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: $link-color;
+    background: rgba($link-color, 0.1);
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0.12s ease;
+
+    &:hover {
+      background: rgba($link-color, 0.2);
+    }
+  }
+
+  tr:has(td b) > td {
+    background-color: rgba($link-color, 0.05);
+  }
+}

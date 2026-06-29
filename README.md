@@ -10,6 +10,16 @@ seo:
 
 ## ADA - Analise and Design of Algorithms
 
+A graduate course on the design and analysis of algorithms, from classical paradigms to modern optimization techniques.
+{: .lead }
+
+<div class="cards-grid quick-links" markdown="0">
+  <a class="feature-card" href="{{ '/sobre/' | relative_url }}"><span class="card-emoji">📋</span><span>About</span></a>
+  <a class="feature-card" href="{{ '/calendario/' | relative_url }}"><span class="card-emoji">🗓️</span><span>Schedule</span></a>
+  <a class="feature-card" href="{{ '/avaliacoes/' | relative_url }}"><span class="card-emoji">📝</span><span>Assignments</span></a>
+  <a class="feature-card" href="{{ '/materiais/' | relative_url }}"><span class="card-emoji">📚</span><span>Resources</span></a>
+</div>
+
 ### Course Description
 
 The goal of this course is to provide graduate students in Computer Science with a solid theoretical and practical foundation in the design and analysis of algorithms, preparing them to solve complex computational problems and conduct research in advanced algorithmic techniques.
@@ -18,15 +28,16 @@ This course presents the fundamental principles of algorithm design, correctness
 
 This course serves as an essential foundation for advanced studies and research in areas such as Artificial Intelligence, Data Science, Bioinformatics, Operations Research, High-Performance Computing, Distributed Systems, and Algorithm Engineering.
 
-## Announcements
+## Lectures 2026.2
+
+{: .info }
+> **Mondays** 0:00–0:00pm · LAB NP 6<br>
+> **Wednesdays** 0:00–0:00pm · LAB NP 6
+
+## Latest announcement
 
 {% assign announcements = site.announcements %}
 {{ announcements.last }}
-
-## Lectures 2026.2
-
-- Mondays 0:00-0:00pm, LAB NP 6
-- Wednesdays 0:00-0:00pm, LAB NP 6
 
 ## Instructor
 
