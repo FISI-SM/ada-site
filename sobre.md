@@ -11,37 +11,14 @@ The goal of this course is to provide graduate students in Computer Science with
 
 ## Prerequisites
 
-<div class="cards-grid" markdown="0">
-  <div class="feature-card">
-    <span class="card-tag">INF213</span>
-    <span class="card-title">Data Structures</span>
-  </div>
-  <div class="feature-card">
-    <span class="card-tag">MAT135</span>
-    <span class="card-title">Analytic Geometry &amp; Linear Algebra</span>
-  </div>
-  <div class="feature-card">
-    <span class="card-tag">MAT140</span>
-    <span class="card-title">Calculus I</span>
-  </div>
-</div>
+{% include cards.html data="prerequisites" %}
 
 {: .important }
 > It is expected that students are comfortable with (1) programming in Python, (2) fundamental operations with vectors and matrices, and (3) derivatives of composite and multivariable functions. Additionally, it is expected that students are familiar with fundamental data structures, as well as the classical algorithms associated with them.
 
 ## Content
 
-<div class="cards-grid" markdown="0">
-  <div class="feature-card"><span class="card-num">01</span><span class="card-title">Introduction</span></div>
-  <div class="feature-card"><span class="card-num">02</span><span class="card-title">Supervised Learning</span></div>
-  <div class="feature-card"><span class="card-num">03</span><span class="card-title">Shallow Neural Networks</span></div>
-  <div class="feature-card"><span class="card-num">04</span><span class="card-title">Deep Neural Networks</span></div>
-  <div class="feature-card"><span class="card-num">05</span><span class="card-title">Improving Performance of Neural Networks</span></div>
-  <div class="feature-card"><span class="card-num">06</span><span class="card-title">Recurrent Neural Networks</span></div>
-  <div class="feature-card"><span class="card-num">07</span><span class="card-title">Convolutional Neural Networks</span></div>
-  <div class="feature-card"><span class="card-num">08</span><span class="card-title">Attention Mechanisms</span></div>
-  <div class="feature-card"><span class="card-num">09</span><span class="card-title">Generative Models</span></div>
-</div>
+{% include cards.html data="content" %}
 
 ## Late Policy
 

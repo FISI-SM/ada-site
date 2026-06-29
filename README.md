@@ -13,12 +13,7 @@ seo:
 A graduate course on the design and analysis of algorithms, from classical paradigms to modern optimization techniques.
 {: .lead }
 
-<div class="cards-grid quick-links" markdown="0">
-  <a class="feature-card" href="{{ '/sobre/' | relative_url }}"><span class="card-emoji">📋</span><span>About</span></a>
-  <a class="feature-card" href="{{ '/calendario/' | relative_url }}"><span class="card-emoji">🗓️</span><span>Schedule</span></a>
-  <a class="feature-card" href="{{ '/avaliacoes/' | relative_url }}"><span class="card-emoji">📝</span><span>Assignments</span></a>
-  <a class="feature-card" href="{{ '/materiais/' | relative_url }}"><span class="card-emoji">📚</span><span>Resources</span></a>
-</div>
+{% include cards.html data="quick_links" class="quick-links" %}
 
 ### Course Description
 

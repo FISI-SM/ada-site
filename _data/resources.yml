@@ -1,0 +1,63 @@
+- heading: Textbooks
+  icon: book
+  description: While this course does not explicitly follow a specific textbook, the following are useful references on many of the topics covered.
+  items:
+    - title: Dive into Deep Learning
+      source: Zhang, Aston, et al.; Cambridge University Press, 2023
+      url: https://d2l.ai/index.html
+      external: true
+    - title: Deep Learning
+      source: Goodfellow, Bengio & Courville; MIT Press, 2016
+      url: https://www.deeplearningbook.org/
+      external: true
+    - title: "Deep Learning: Foundations and Concepts"
+      source: C. M. Bishop & H. Bishop; Springer, 2024
+      url: https://www.bishopbook.com/
+      external: true
+    - title: Understanding Deep Learning
+      source: Simon J. D. Prince; The MIT Press, 2023
+      url: https://udlbook.github.io/udlbook/
+      external: true
+    - title: The Little Book of Deep Learning
+      source: François Fleuret; 2023
+      url: https://fleuret.org/francois/lbdl.html
+      external: true
+    - title: Introduction to Neural Network Models of Cognition
+      url: https://com-cog-book.github.io/com-cog-book/intro
+      external: true
+
+- heading: Related Courses
+  icon: cap
+  items:
+    - title: "CS182: Deep Learning"
+      source: UC Berkeley
+      url: https://cs182sp21.github.io/
+      external: true
+    - title: Deep Learning Specialization
+      source: DeepLearning.AI
+      url: https://www.coursera.org/specializations/deep-learning
+      external: true
+    - title: "6.S191: Introduction to Deep Learning"
+      source: MIT
+      url: http://introtodeeplearning.com/
+      external: true
+    - title: "CS 4644: Deep Learning"
+      source: Georgia Tech
+      url: https://sites.cc.gatech.edu/classes/AY2023/cs7643_spring/
+      external: true
+    - title: "DS-GA 1008: Deep Learning"
+      source: NYU
+      url: https://atcold.github.io/NYU-DLSP21/
+      external: true
+
+- heading: YouTube
+  icon: play
+  items:
+    - title: "Neural Networks: Zero to Hero"
+      source: Andrej Karpathy
+      url: https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ
+      external: true
+    - title: Neural Networks
+      source: 3Blue1Brown
+      url: https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+      external: true

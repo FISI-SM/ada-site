@@ -630,9 +630,14 @@ summary {
   pointer-events: none;
 }
 
-.feature-card .card-emoji {
-  font-size: 1.3rem;
-  line-height: 1;
+.feature-card .card-ico {
+  display: inline-flex;
+  color: $link-color;
+
+  .icon-svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 }
 
 .feature-card .card-pct {
