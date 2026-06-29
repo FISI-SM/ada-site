@@ -1,19 +1,27 @@
 - items:
+    - num: "00"
+      title: Course Presentation
+
     - num: "01"
-      title: Introduction
+      title: Algorithm Analysis and Complexity
+
     - num: "02"
-      title: Supervised Learning
+      title: Sorting Algorithms
+
     - num: "03"
-      title: Shallow Neural Networks
+      title: Selection Algorithms
+
     - num: "04"
-      title: Deep Neural Networks
+      title: Graph Algorithms
+
     - num: "05"
-      title: Improving Performance of Neural Networks
+      title: Greedy Algorithms
+
     - num: "06"
-      title: Recurrent Neural Networks
+      title: Divide and Conquer
+
     - num: "07"
-      title: Convolutional Neural Networks
+      title: Dynamic Programming
+
     - num: "08"
-      title: Attention Mechanisms
-    - num: "09"
-      title: Generative Models
+      title: P, NP, and NP-Complete Problems
