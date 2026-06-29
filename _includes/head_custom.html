@@ -1,0 +1,22 @@
+<!-- Favicon: escudo UNMSM -->
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon-180.png' | relative_url }}">
+
+<!-- Fuentes: Inter (texto) + JetBrains Mono (código) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Evita el parpadeo (FOUC): aplica el tema preferido antes de pintar -->
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("jtd-theme");
+      var dark = stored ? stored === "dark"
+        : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      if (dark) {
+        document.documentElement.setAttribute("data-prefers-dark", "1");
+      }
+    } catch (e) {}
+  })();
+</script>

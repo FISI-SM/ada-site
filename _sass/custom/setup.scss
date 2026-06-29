@@ -1,0 +1,10 @@
+// custom setup code goes here
+// Se importa después de las variables del tema, así que reasignamos sin !default.
+
+// Tipografía moderna
+$body-font-family: "Inter", system-ui, -apple-system, "Segoe UI", roboto, sans-serif;
+$mono-font-family: "JetBrains Mono", "SFMono-Regular", menlo, consolas, monospace;
+$root-font-size: 16px;
+
+// Bordes más suaves y redondeados
+$border-radius: 10px;

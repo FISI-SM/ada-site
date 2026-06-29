@@ -1,0 +1,19 @@
+// Esquema CLARO — Granate San Marcos sobre neutros
+$color-scheme: light;
+
+$body-background-color: #fcfcfd;
+$sidebar-color: #f6f4f5;
+$body-heading-color: #1a1a1a;
+$body-text-color: #2c2c31;
+$link-color: #8c1d2c; // granate
+$nav-child-link-color: #4a4a4f;
+$base-button-color: #f1eeef;
+$btn-primary-color: #8c1d2c;
+$code-background-color: #f5f3f4;
+$feedback-color: darken($sidebar-color, 3%);
+$table-background-color: #ffffff;
+$search-background-color: #ffffff;
+$search-result-preview-color: #6b6b70;
+$border-color: #ece9ea;
+
+@import "./vendor/OneLightJekyll/syntax";

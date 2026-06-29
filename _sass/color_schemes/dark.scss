@@ -1,0 +1,20 @@
+// Esquema OSCURO — Granate San Marcos, tonos cálidos casi-negros
+$color-scheme: dark;
+
+$body-background-color: #14110f;
+$sidebar-color: #1b1714;
+$body-heading-color: #faf7f5;
+$body-text-color: #e6e1de;
+$link-color: #e8788a; // granate aclarado para contraste AA
+$nav-child-link-color: #c9c3bf;
+$base-button-color: #241f1b;
+$btn-primary-color: #e8788a;
+$code-background-color: #1f1a17;
+$code-linenumber-color: #dee2f7;
+$feedback-color: lighten($sidebar-color, 2%);
+$table-background-color: #1b1714;
+$search-background-color: #1b1714;
+$search-result-preview-color: #a89f99;
+$border-color: #2c2622;
+
+@import "./vendor/OneDarkJekyll/syntax";
