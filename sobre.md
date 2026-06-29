@@ -7,14 +7,14 @@ description: >-
 
 ## Course Description
 
-The goal of this course is to provide graduate students in Computer Science with a theoretical and practical foundation in Deep Learning, targeting those interested in conducting research in this area. This course presents the main neural network techniques in a comprehensive manner, aiming to enable students to build a vast repertoire of techniques, from classical architectures like MLPs to more modern architectures such as Convolutional Networks and Transformers. This course serves as a solid starting point for applied studies in related areas, such as Robotics, Computer Vision, Natural Language Processing, among others.
+The goal of this course is to provide undergraduate students in Computer Science with a solid theoretical and practical foundation in Algorithm Analysis and Design, preparing them to develop efficient algorithmic solutions for complex computational problems. The course presents the fundamental paradigms of algorithm design in a comprehensive manner, enabling students to analyze computational complexity and apply appropriate strategies such as divide and conquer, greedy algorithms, dynamic programming, backtracking, branch and bound, randomized algorithms, and graph algorithms. Emphasis is placed on asymptotic analysis, correctness, scalability, and algorithmic trade-offs. This course serves as a fundamental basis for advanced studies in areas such as Artificial Intelligence, Data Science, High-Performance Computing, Operations Research, Bioinformatics, Computer Graphics, and Software Engineering.
 
 ## Prerequisites
 
 {% include cards.html data="prerequisites" %}
 
 {: .important }
-> It is expected that students are comfortable with (1) programming in Python, (2) fundamental operations with vectors and matrices, and (3) derivatives of composite and multivariable functions. Additionally, it is expected that students are familiar with fundamental data structures, as well as the classical algorithms associated with them.
+> It is expected that students are comfortable with (1) programming in a high-level language (e.g., C++, Java, Go, or Python), (2) fundamental discrete mathematics concepts, including logic, sets, relations, functions, and proof techniques, and (3) basic mathematical reasoning involving summations, recurrences, and elementary probability. Additionally, students are expected to be familiar with fundamental data structures (arrays, linked lists, stacks, queues, trees, hash tables, and graphs) and the classical algorithms associated with them, such as searching, sorting, graph traversal, and basic graph algorithms.
 
 ## Content
 
