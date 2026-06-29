@@ -1,0 +1,8 @@
+{% comment %}
+  Override del tema just-the-docs: muestra el logo Y el texto del título debajo,
+  en lugar de reemplazar el título por el logo.
+{% endcomment %}
+{% if site.logo %}
+<div class="site-logo" role="img" aria-label="{{ site.title }}" style="background-image: url('{{ site.logo | absolute_url }}')"></div>
+{% endif %}
+<span class="site-title-text">{{ site.title }}</span>
