@@ -4,27 +4,27 @@
   items:
     - title: Introduction to Algorithms (4th Edition)
       source: Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest & Clifford Stein; MIT Press, 2022
-      url: https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/
+      #url: https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/
       external: true
 
     - title: Algorithms (4th Edition)
       source: Robert Sedgewick & Kevin Wayne; Addison-Wesley Professional, 2011
-      url: https://algs4.cs.princeton.edu/home/
+      #url: https://algs4.cs.princeton.edu/home/
       external: true
 
     - title: Algorithm Design
       source: Jon Kleinberg & Éva Tardos; Pearson Addison-Wesley, 2006
-      url: https://www.pearson.com/en-us/subject-catalog/p/algorithm-design/P200000003479
+      #url: https://www.pearson.com/en-us/subject-catalog/p/algorithm-design/P200000003479
       external: true
 
     - title: Técnicas de Diseño de Algoritmos
       source: Rosa Guerequeta & Antonio Vallecillo; Universidad de Málaga, 1998
-      url: https://www.lcc.uma.es/
+      #url: https://www.lcc.uma.es/
       external: true
 
     - title: Algorithms
       source: Sanjoy Dasgupta, Christos H. Papadimitriou & Umesh V. Vazirani; McGraw-Hill Higher Education, 2008
-      url: https://algorithmics.lsi.upc.edu/docs/Dasgupta-Papadimitriou-Vazirani.pdf
+      #url: https://algorithmics.lsi.upc.edu/docs/Dasgupta-Papadimitriou-Vazirani.pdf
       external: true
 
 - heading: Related Courses
@@ -70,7 +70,7 @@
 
     - title: "Algorithms"
       source: Abdul Bari
-      url: https://www.youtube.com/@AbdulBari
+      #url: https://www.youtube.com/@AbdulBari
       external: true
 
     - title: "Algorithms and Data Structures"
