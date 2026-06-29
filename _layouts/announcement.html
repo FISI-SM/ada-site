@@ -1,14 +1,14 @@
 <div class="announcement">
-  <h2>{{ page.title }}</h2>
+  <div class="announcement-head">
+    <span class="announcement-ico">{% include icon.html name="megaphone" %}</span>
+    <h2>{{ page.title }}</h2>
+  </div>
   <span class="announcement-meta">
-    {% if page.date %}
-    {{ page.date | date: '%b %e' }}
-    &middot;
-    {% endif %}
+    {% if page.date %}{{ page.date | date: '%b %e, %Y' }}{% endif %}
     {% assign minutes = content | strip_html | number_of_words | divided_by: 180.0 | round %}
-    {{ minutes }} min read
+    {% if minutes > 0 %}&middot; {{ minutes }} min read{% endif %}
   </span>
-  <div>
+  <div class="announcement-body">
     {{ content }}
   </div>
 </div>
