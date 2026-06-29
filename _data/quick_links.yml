@@ -1,0 +1,13 @@
+- items:
+    - title: About
+      url: /sobre/
+      icon: clipboard
+    - title: Schedule
+      url: /calendario/
+      icon: calendar
+    - title: Assignments
+      url: /avaliacoes/
+      icon: edit
+    - title: Resources
+      url: /materiais/
+      icon: book

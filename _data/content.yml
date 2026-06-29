@@ -1,0 +1,19 @@
+- items:
+    - num: "01"
+      title: Introduction
+    - num: "02"
+      title: Supervised Learning
+    - num: "03"
+      title: Shallow Neural Networks
+    - num: "04"
+      title: Deep Neural Networks
+    - num: "05"
+      title: Improving Performance of Neural Networks
+    - num: "06"
+      title: Recurrent Neural Networks
+    - num: "07"
+      title: Convolutional Neural Networks
+    - num: "08"
+      title: Attention Mechanisms
+    - num: "09"
+      title: Generative Models
