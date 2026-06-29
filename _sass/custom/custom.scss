@@ -703,12 +703,13 @@ table.schedule {
   td a {
     display: inline-block;
     margin: 2px 4px 2px 0;
-    padding: 1px 9px;
+    padding: 2px 9px;
     font-size: 0.74rem;
     font-weight: 500;
+    line-height: 1.45;
     color: $link-color;
     background: rgba($link-color, 0.1);
-    border-radius: 999px;
+    border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.12s ease;
 
@@ -719,5 +720,33 @@ table.schedule {
 
   tr:has(td b) > td {
     background-color: rgba($link-color, 0.05);
+  }
+}
+
+.announcement {
+  background: $table-background-color;
+  border: 1px solid $border-color;
+  box-shadow: none;
+  padding: $sp-4 $sp-5;
+
+  h1,
+  h2 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    padding-bottom: 0;
+    border-bottom: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .announcement-meta {
+    display: block;
+    margin-bottom: $sp-3;
+    color: $search-result-preview-color;
+    font-size: 0.76rem;
+  }
+
+  > div > :last-child {
+    margin-bottom: 0;
   }
 }
