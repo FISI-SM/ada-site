@@ -2,62 +2,84 @@
   icon: book
   description: While this course does not explicitly follow a specific textbook, the following are useful references on many of the topics covered.
   items:
-    - title: Dive into Deep Learning
-      source: Zhang, Aston, et al.; Cambridge University Press, 2023
-      url: https://d2l.ai/index.html
+    - title: Introduction to Algorithms (4th Edition)
+      source: Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest & Clifford Stein; MIT Press, 2022
+      url: https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/
       external: true
-    - title: Deep Learning
-      source: Goodfellow, Bengio & Courville; MIT Press, 2016
-      url: https://www.deeplearningbook.org/
+
+    - title: Algorithms (4th Edition)
+      source: Robert Sedgewick & Kevin Wayne; Addison-Wesley Professional, 2011
+      url: https://algs4.cs.princeton.edu/home/
       external: true
-    - title: "Deep Learning: Foundations and Concepts"
-      source: C. M. Bishop & H. Bishop; Springer, 2024
-      url: https://www.bishopbook.com/
+
+    - title: Algorithm Design
+      source: Jon Kleinberg & Éva Tardos; Pearson Addison-Wesley, 2006
+      url: https://www.pearson.com/en-us/subject-catalog/p/algorithm-design/P200000003479
       external: true
-    - title: Understanding Deep Learning
-      source: Simon J. D. Prince; The MIT Press, 2023
-      url: https://udlbook.github.io/udlbook/
+
+    - title: Técnicas de Diseño de Algoritmos
+      source: Rosa Guerequeta & Antonio Vallecillo; Universidad de Málaga, 1998
+      url: https://www.lcc.uma.es/
       external: true
-    - title: The Little Book of Deep Learning
-      source: François Fleuret; 2023
-      url: https://fleuret.org/francois/lbdl.html
-      external: true
-    - title: Introduction to Neural Network Models of Cognition
-      url: https://com-cog-book.github.io/com-cog-book/intro
+
+    - title: Algorithms
+      source: Sanjoy Dasgupta, Christos H. Papadimitriou & Umesh V. Vazirani; McGraw-Hill Higher Education, 2008
+      url: https://algorithmics.lsi.upc.edu/docs/Dasgupta-Papadimitriou-Vazirani.pdf
       external: true
 
 - heading: Related Courses
   icon: cap
   items:
-    - title: "CS182: Deep Learning"
-      source: UC Berkeley
-      url: https://cs182sp21.github.io/
+    - title: "6.006: Introduction to Algorithms"
+      source: Massachusetts Institute of Technology (MIT)
+      url: https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/
       external: true
-    - title: Deep Learning Specialization
-      source: DeepLearning.AI
-      url: https://www.coursera.org/specializations/deep-learning
+
+    - title: "6.046J: Design and Analysis of Algorithms"
+      source: Massachusetts Institute of Technology (MIT)
+      url: https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/
       external: true
-    - title: "6.S191: Introduction to Deep Learning"
-      source: MIT
-      url: http://introtodeeplearning.com/
+
+    - title: "Algorithms, Part I"
+      source: Princeton University
+      url: https://www.coursera.org/learn/algorithms-part1
       external: true
-    - title: "CS 4644: Deep Learning"
-      source: Georgia Tech
-      url: https://sites.cc.gatech.edu/classes/AY2023/cs7643_spring/
+
+    - title: "Algorithms, Part II"
+      source: Princeton University
+      url: https://www.coursera.org/learn/algorithms-part2
       external: true
-    - title: "DS-GA 1008: Deep Learning"
-      source: NYU
-      url: https://atcold.github.io/NYU-DLSP21/
+
+    - title: "Algorithms: Design and Analysis"
+      source: Stanford University
+      url: https://www.edx.org/learn/algorithms/stanford-university-algorithms-design-and-analysis-part-1
       external: true
 
 - heading: YouTube
   icon: play
   items:
-    - title: "Neural Networks: Zero to Hero"
-      source: Andrej Karpathy
-      url: https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ
+    - title: "MIT 6.006: Introduction to Algorithms"
+      source: MIT OpenCourseWare
+      url: https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY
       external: true
-    - title: Neural Networks
-      source: 3Blue1Brown
-      url: https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+
+    - title: "MIT 6.046J: Design and Analysis of Algorithms"
+      source: MIT OpenCourseWare
+      url: https://www.youtube.com/playlist?list=PLUl4u3cNGP61MdtwGTqZA0MreSaDybji8
       external: true
+
+    - title: "Algorithms"
+      source: Abdul Bari
+      url: https://www.youtube.com/@AbdulBari
+      external: true
+
+    - title: "Algorithms and Data Structures"
+      source: William Fiset
+      url: https://www.youtube.com/@WilliamFiset-videos
+      external: true
+
+    - title: "Algorithms"
+      source: mycodeschool
+      url: https://www.youtube.com/@mycodeschool
+      external: true
+
