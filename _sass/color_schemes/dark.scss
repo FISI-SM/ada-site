@@ -11,10 +11,10 @@ $base-button-color: #241f1b;
 $btn-primary-color: #e8788a;
 $code-background-color: #1f1a17;
 $code-linenumber-color: #dee2f7;
-$feedback-color: lighten($sidebar-color, 2%);
-$table-background-color: #1b1714;
+$feedback-color: #272019;
+$table-background-color: #211b18; // superficie elevada (cards) sobre el fondo
 $search-background-color: #1b1714;
-$search-result-preview-color: #a89f99;
-$border-color: #2c2622;
+$search-result-preview-color: #b3aaa4;
+$border-color: #3b332e; // borde más visible en oscuro
 
 @import "./vendor/OneDarkJekyll/syntax";

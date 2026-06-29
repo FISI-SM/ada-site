@@ -27,6 +27,22 @@ remote_theme: just-the-docs/just-the-docs@v0.7.0
 color_scheme: light
 search_enabled: true
 heading_anchors: true
+
+# Callouts (admonitions) — bloques destacados para notas, tips y avisos
+# (sin callouts_level: se adapta automáticamente a claro/oscuro)
+callouts:
+  info:
+    title: Info
+    color: blue
+  tip:
+    title: Tip
+    color: green
+  important:
+    title: Important
+    color: purple
+  warning:
+    title: Warning
+    color: red
 permalink: pretty
 aux_links:
   Herminio Paucar C:
