@@ -8,6 +8,45 @@
 @import 'staffer';
 
 // Overrides
+
+// Mostrar el logo (escudo UNMSM) y el texto del título apilados.
+// El header del tema tiene altura fija y recorta el logo: lo liberamos.
+.site-header {
+  height: auto;
+  max-height: none;
+  min-height: 0;
+}
+
+.site-header .site-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding-top: $sp-4;
+  padding-bottom: $sp-4;
+  line-height: 1.2;
+
+  &:hover {
+    background-image: none; // evita el degradado del tema al hacer hover
+  }
+}
+
+.site-header .site-logo {
+  width: 84px;
+  height: 84px;
+  margin-bottom: $sp-2;
+  background-position: center center;
+  background-size: contain;
+}
+
+.site-header .site-title-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: normal;
+}
+
 code {
   font-size: 14px;
   padding: 0.2em 0.4em;
