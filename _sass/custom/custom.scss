@@ -105,6 +105,67 @@
   border-right: 1px solid $border-color;
 }
 
+// --- Navegación lateral moderna ---
+.site-nav {
+  padding-top: $sp-3;
+  padding-left: $sp-3;
+  padding-right: $sp-3;
+}
+
+.nav-list {
+  .nav-list-item {
+    margin: 2px 0;
+
+    .nav-list-link {
+      padding: 0.4rem 0.7rem;
+      border-radius: $border-radius;
+      font-weight: 500;
+      color: $body-text-color;
+      transition: background-color 0.15s ease, color 0.15s ease;
+
+      &:hover {
+        background-color: $feedback-color;
+        color: $link-color;
+      }
+
+      &.active {
+        position: relative;
+        color: $link-color;
+        font-weight: 600;
+        background-color: rgba($link-color, 0.08);
+
+        // Barra de acento a la izquierda del ítem activo
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 3px;
+          height: 1.1rem;
+          background-color: $link-color;
+          border-radius: 999px;
+        }
+      }
+    }
+
+    // Sub-niveles (si los hubiera) con sangría sutil
+    .nav-list .nav-list-link {
+      padding-left: 1.1rem;
+      font-weight: 400;
+    }
+  }
+}
+
+// Botón expandir/colapsar más discreto
+.nav-list-expander {
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: $feedback-color;
+  }
+}
+
 .main-header {
   border-bottom: 1px solid $border-color;
 }
@@ -156,4 +217,158 @@ summary {
       margin-top: 1em;
     }
   }
+}
+
+// =====================================================================
+//  Legibilidad y componentes de contenido (toque moderno)
+// =====================================================================
+
+// Ancho de prosa cómodo (45–90 caracteres) e interlineado de lectura
+.main-content {
+  line-height: 1.65;
+
+  > p,
+  > ul,
+  > ol {
+    max-width: 42rem;
+  }
+
+  // Ritmo de los encabezados: más aire arriba, peso definido
+  h1,
+  h2,
+  h3 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    margin-top: 2.4rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  h3 {
+    margin-top: 1.8rem;
+  }
+}
+
+// Párrafo de entrada (lead): resume la página, más grande y tenue
+.lead {
+  max-width: 44rem;
+  margin-bottom: $sp-5;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: $search-result-preview-color;
+}
+
+// Grilla de tarjetas reutilizable (prerequisitos, temario, etc.)
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: $sp-3;
+  margin: $sp-4 0;
+  max-width: 100%;
+
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: $sp-4;
+    background: $table-background-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    transition: border-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+
+    &:hover {
+      border-color: $link-color;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    .card-tag {
+      align-self: flex-start;
+      padding: 2px 8px;
+      font-family: $mono-font-family;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: $link-color;
+      background: rgba($link-color, 0.13);
+      border-radius: 999px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      color: $body-heading-color;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: $search-result-preview-color;
+    }
+
+    // Variante numerada (temario)
+    .card-num {
+      font-family: $mono-font-family;
+      font-size: 0.8rem;
+      color: $link-color;
+    }
+  }
+}
+
+// Tabla limpia: sin contenedor ni sombra — solo línea de cabecera y filas
+// El tema envuelve las tablas en .table-wrapper (sombra + borde + radio): lo anulamos
+.table-wrapper {
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+}
+
+.main-content table {
+  display: table;
+  width: 100%;
+  margin: $sp-4 0;
+  border-collapse: collapse;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+
+  thead th {
+    background: transparent;
+    color: $body-heading-color;
+    font-weight: 600;
+    border: none;
+    border-bottom: 2px solid $border-color;
+  }
+
+  th,
+  td {
+    padding: 0.6rem 0.9rem;
+    border: none;
+    border-bottom: 1px solid $border-color;
+    background: transparent;
+  }
+
+  th:first-child,
+  td:first-child {
+    padding-left: 0;
+  }
+
+  tbody tr {
+    transition: background-color 0.12s ease;
+
+    &:hover {
+      background-color: rgba($link-color, 0.05);
+    }
+  }
+}
+
+// Pulido de callouts: borde izquierdo marcado y radio acorde
+.main-content blockquote.note,
+.main-content blockquote.info,
+.main-content blockquote.tip,
+.main-content blockquote.important,
+.main-content blockquote.warning,
+.main-content blockquote.highlight {
+  border-radius: $border-radius;
+  border-left-width: 4px;
 }
