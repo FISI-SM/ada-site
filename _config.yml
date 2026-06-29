@@ -48,9 +48,23 @@ aux_links:
   Herminio Paucar C:
     - 'https://hpaucar.github.io'
   FISI:
-    - 'https://sistemas.unmsm.edu.pe'    
+    - 'https://sistemas.unmsm.edu.pe'
   Universidad Nacional Mayor de San Marcos:
     - 'https://www.unmsm.edu.pe'
+
+# Brand links rendered as circular avatars + tooltips in the top bar
+brand_links:
+  - name: Herminio Paucar C.
+    url: 'https://hpaucar.github.io'
+    logo: '/assets/images/herminio.jpg'
+  - name: FISI
+    url: 'https://sistemas.unmsm.edu.pe'
+    logo: '/assets/images/fisi.webp'
+  - name: Universidad Nacional Mayor de San Marcos
+    url: 'https://www.unmsm.edu.pe'
+    logo: '/assets/images/sanmarcos.webp'
+    padded: true
+
 footer_content:
 
 # Collections for website data

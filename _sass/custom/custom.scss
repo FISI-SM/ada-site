@@ -1,16 +1,11 @@
-// Just the Class dependencies
-@import 'card';
 
-// Just the Class styles
-@import 'announcement';
-@import 'module';
-@import 'schedule';
-@import 'staffer';
+@import "card";
 
-// Overrides
+@import "announcement";
+@import "module";
+@import "schedule";
+@import "staffer";
 
-// Mostrar el logo (escudo UNMSM) y el texto del título apilados.
-// El header del tema tiene altura fija y recorta el logo: lo liberamos.
 .site-header {
   height: auto;
   max-height: none;
@@ -28,7 +23,7 @@
   line-height: 1.2;
 
   &:hover {
-    background-image: none; // evita el degradado del tema al hacer hover
+    background-image: none;
   }
 }
 
@@ -47,9 +42,6 @@
   white-space: normal;
 }
 
-// --- Switch de tema (dark/light) ---
-// El header es flex: con `order` mandamos el botón al extremo derecho,
-// después de los aux-links (Universidad Nacional...).
 .theme-toggle {
   order: 3;
   align-self: center;
@@ -66,7 +58,10 @@
   border-radius: $border-radius;
   cursor: pointer;
   opacity: 0.7;
-  transition: opacity 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+  transition:
+    opacity 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
 
   &:hover {
     opacity: 1;
@@ -81,9 +76,143 @@
 
 .main-header .aux-nav {
   order: 2;
+  align-self: center;
 }
 
-// --- Footer de la barra lateral (reemplaza la atribución del tema) ---
+#main-header,
+.main-header .aux-nav,
+.aux-nav-list {
+  overflow: visible;
+}
+
+.aux-nav-list {
+  display: flex;
+  align-items: center;
+  height: auto;
+  gap: $sp-2;
+}
+
+.aux-nav .aux-nav-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.brand-avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  background: $body-background-color;
+  border: 1px solid $border-color;
+  overflow: visible;
+  transition:
+    transform 0.12s ease,
+    border-color 0.12s ease,
+    box-shadow 0.12s ease;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  &.is-logo img {
+    padding: 3px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-1px);
+    border-color: $link-color;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 1000;
+    padding: 4px 8px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    white-space: nowrap;
+    color: $body-background-color;
+    background: $body-heading-color;
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2px);
+    transition:
+      opacity 0.12s ease,
+      transform 0.12s ease;
+    pointer-events: none;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.main-header .search {
+  display: flex;
+  align-items: center;
+}
+
+.search-input-wrap {
+  position: relative !important;
+  width: 100%;
+  max-width: 22rem;
+  margin-left: $sp-4;
+  height: 2.4rem !important;
+  border-radius: 999px;
+  overflow: hidden;
+  background-color: $feedback-color;
+  border: 1px solid $border-color;
+  box-shadow: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+
+  &:focus-within {
+    background-color: $body-background-color;
+    border-color: $link-color;
+    box-shadow: 0 0 0 3px rgba($link-color, 0.18);
+  }
+}
+
+.search-input {
+  padding-left: 2.6rem;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.search-label {
+  align-items: center;
+  padding-left: 0.95rem;
+
+  .search-icon {
+    width: 1.05rem;
+    height: 1.05rem;
+    color: $search-result-preview-color;
+  }
+}
+
 .site-footer {
   display: flex;
   flex-direction: column;
@@ -100,12 +229,129 @@
   }
 }
 
-// --- Toques minimalistas ---
+@media (max-width: 49.9rem) {
+
+  .side-bar {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: $sidebar-color;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .site-header,
+  .site-footer {
+    width: 100%;
+  }
+
+  .site-header .site-title {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $sp-3;
+    padding-top: $sp-2;
+    padding-bottom: $sp-2;
+  }
+
+  .site-header .site-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .site-header .site-title-text {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .site-footer {
+    display: none;
+  }
+
+  .main-header.nav-open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $sp-3;
+    padding: $sp-3 $sp-4 $sp-4;
+  }
+
+  .main-header .search {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .search-input-wrap {
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .aux-nav-list {
+    justify-content: center;
+  }
+
+  .brand-avatar::after {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2px);
+  }
+
+  .brand-avatar:hover::after,
+  .brand-avatar:focus-visible::after {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .theme-toggle {
+    align-self: center;
+    width: auto;
+    height: 2.25rem;
+    padding: 0 $sp-3;
+    gap: $sp-2;
+    border: 1px solid $border-color;
+    opacity: 1;
+
+    &::after {
+      content: "Theme";
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.main-content > footer .page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+  color: $search-result-preview-color;
+
+  .footer-org {
+    font-weight: 600;
+    color: $body-heading-color;
+  }
+
+  .footer-sub {
+    font-size: 0.72rem;
+    opacity: 0.7;
+  }
+}
+
+@media (min-width: 50rem) {
+  .main-content > hr,
+  .main-content > footer {
+    display: none;
+  }
+}
+
 .side-bar {
   border-right: 1px solid $border-color;
 }
 
-// --- Navegación lateral moderna ---
 .site-nav {
   padding-top: $sp-3;
   padding-left: $sp-3;
@@ -121,7 +367,9 @@
       border-radius: $border-radius;
       font-weight: 500;
       color: $body-text-color;
-      transition: background-color 0.15s ease, color 0.15s ease;
+      transition:
+        background-color 0.15s ease,
+        color 0.15s ease;
 
       &:hover {
         background-color: $feedback-color;
@@ -134,7 +382,6 @@
         font-weight: 600;
         background-color: rgba($link-color, 0.08);
 
-        // Barra de acento a la izquierda del ítem activo
         &::before {
           content: "";
           position: absolute;
@@ -149,7 +396,6 @@
       }
     }
 
-    // Sub-niveles (si los hubiera) con sangría sutil
     .nav-list .nav-list-link {
       padding-left: 1.1rem;
       font-weight: 400;
@@ -157,7 +403,6 @@
   }
 }
 
-// Botón expandir/colapsar más discreto
 .nav-list-expander {
   border-radius: $border-radius;
 
@@ -219,11 +464,6 @@ summary {
   }
 }
 
-// =====================================================================
-//  Legibilidad y componentes de contenido (toque moderno)
-// =====================================================================
-
-// Ancho de prosa cómodo (45–90 caracteres) e interlineado de lectura
 .main-content {
   line-height: 1.65;
 
@@ -233,7 +473,6 @@ summary {
     max-width: 42rem;
   }
 
-  // Ritmo de los encabezados: más aire arriba, peso definido
   h1,
   h2,
   h3 {
@@ -252,7 +491,6 @@ summary {
   }
 }
 
-// Párrafo de entrada (lead): resume la página, más grande y tenue
 .lead {
   max-width: 44rem;
   margin-bottom: $sp-5;
@@ -261,7 +499,6 @@ summary {
   color: $search-result-preview-color;
 }
 
-// Grilla de tarjetas reutilizable (prerequisitos, temario, etc.)
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -277,7 +514,10 @@ summary {
     background: $table-background-color;
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    transition: border-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    transition:
+      border-color 0.15s ease,
+      transform 0.1s ease,
+      box-shadow 0.15s ease;
 
     &:hover {
       border-color: $link-color;
@@ -306,7 +546,6 @@ summary {
       color: $search-result-preview-color;
     }
 
-    // Variante numerada (temario)
     .card-num {
       font-family: $mono-font-family;
       font-size: 0.8rem;
@@ -315,54 +554,59 @@ summary {
   }
 }
 
-// Tabla limpia: sin contenedor ni sombra — solo línea de cabecera y filas
-// El tema envuelve las tablas en .table-wrapper (sombra + borde + radio): lo anulamos
 .table-wrapper {
   box-shadow: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .main-content table {
   display: table;
   width: 100%;
   margin: $sp-4 0;
-  border-collapse: collapse;
-  border: none;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
   box-shadow: none;
-  background: transparent;
-
-  thead th {
-    background: transparent;
-    color: $body-heading-color;
-    font-weight: 600;
-    border: none;
-    border-bottom: 2px solid $border-color;
-  }
+  background: $table-background-color;
 
   th,
   td {
     padding: 0.6rem 0.9rem;
+    text-align: left;
     border: none;
     border-bottom: 1px solid $border-color;
-    background: transparent;
+    border-right: 1px solid $border-color;
   }
 
-  th:first-child,
-  td:first-child {
-    padding-left: 0;
+  th:last-child,
+  td:last-child {
+    border-right: none;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  thead th {
+    font-weight: 600;
+    color: $body-heading-color;
+    background-color: rgba($link-color, 0.07);
+    border-bottom: 1px solid $border-color;
   }
 
   tbody tr {
     transition: background-color 0.12s ease;
 
     &:hover {
-      background-color: rgba($link-color, 0.05);
+      background-color: rgba($link-color, 0.04);
     }
   }
 }
 
-// Pulido de callouts: borde izquierdo marcado y radio acorde
 .main-content blockquote.note,
 .main-content blockquote.info,
 .main-content blockquote.tip,
