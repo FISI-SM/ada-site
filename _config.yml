@@ -56,7 +56,7 @@ aux_links:
 brand_links:
   - name: Herminio Paucar C.
     url: 'https://hpaucar.github.io'
-    logo: '/assets/images/herminio.jpg'
+    logo: '/assets/images/herminio.webp'
   - name: FISI
     url: 'https://sistemas.unmsm.edu.pe'
     logo: '/assets/images/fisi.webp'
