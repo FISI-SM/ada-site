@@ -1,0 +1,2983 @@
+# Quiz data — practice questions grouped by topic (dropdown groups = `group`, each entry = one "Set").
+# Rendered by /assets/js/quiz.js on /quiz/. Math is LaTeX ($...$), rendered with MathJax.
+# Content transcribed from the au.dk ADS exam quiz (cs.au.dk/~gerth/ads25/quiz); answers verified
+# against the official solution PDF. Recurrence answers computed via the Master Theorem;
+# asymptotic explanations derive from a growth-class comparison (verified 120/120 vs the official key).
+
+- group: 'Asymptotic notation'
+  topic: 'Set 1'
+  intro: 'In the following, $\log n$ denotes the base-2 logarithm of $n$. Decide whether each statement is true or false.'
+  questions:
+    - type: truefalse
+      prompt: '$(\log n)^3 = O(n^2)$'
+      answer: true
+      explanation: 'True. $(\log n)^3$ is polylogarithmic and grows more slowly than $n^2$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$4\log(n^2) = O(n^{3/2})$'
+      answer: true
+      explanation: 'True. $4\log(n^2)$ is polylogarithmic and grows more slowly than $n^{3/2}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n^2 + 3\log n = O(\log n)$'
+      answer: false
+      explanation: 'False. $n^2 + 3\log n$ is polynomial and grows faster than $\log n$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^2 = O(n)$'
+      answer: false
+      explanation: 'False. $n^2$ is polynomial and grows faster than $n$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$2n \cdot \log n = O(2^n)$'
+      answer: true
+      explanation: 'True. $2n \cdot \log n$ is polynomial times a logarithmic factor and grows more slowly than $2^n$ (exponential), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$3^3 + \sqrt{n} = O(n!)$'
+      answer: true
+      explanation: 'True. $3^3 + \sqrt{n}$ is polynomial and grows more slowly than $n!$ (factorial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$3\sqrt{n} + 7n^{1/3} = O(n^{0.1})$'
+      answer: false
+      explanation: 'False. $3\sqrt{n} + 7n^{1/3}$ is polynomial and grows faster than $n^{0.1}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$4(\log n)^4 = O(2^n)$'
+      answer: true
+      explanation: 'True. $4(\log n)^4$ is polylogarithmic and grows more slowly than $2^n$ (exponential), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = O(\sqrt{n})$'
+      answer: false
+      explanation: 'False. $n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $\sqrt{n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$\log n = \Omega(\sqrt{n})$'
+      answer: false
+      explanation: 'False. $\log n$ is polylogarithmic and grows more slowly than $\sqrt{n}$ (polynomial), so it is not $\Omega$ of it.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = \Omega(n^{0.1})$'
+      answer: true
+      explanation: 'True. $n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $n^{0.1}$ (polynomial), so the $\Omega$ bound holds.'
+    - type: truefalse
+      prompt: '$n^{0.01}/5 = \Omega(\log n)$'
+      answer: true
+      explanation: 'True. $n^{0.01}/5$ is polynomial and grows faster than $\log n$ (polylogarithmic), so the $\Omega$ bound holds.'
+- group: 'Asymptotic notation'
+  topic: 'Set 2'
+  intro: 'In the following, $\log n$ denotes the base-2 logarithm of $n$. Decide whether each statement is true or false.'
+  questions:
+    - type: truefalse
+      prompt: '$6\sqrt{n} \cdot \log n = O(n^{2/3})$'
+      answer: true
+      explanation: 'True. $6\sqrt{n} \cdot \log n$ is polynomial times a logarithmic factor and grows more slowly than $n^{2/3}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n^{0.1} = O(n)$'
+      answer: true
+      explanation: 'True. $n^{0.1}$ is polynomial and grows more slowly than $n$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$7(\log n)^2 = O(n^{0.001})$'
+      answer: true
+      explanation: 'True. $7(\log n)^2$ is polylogarithmic and grows more slowly than $n^{0.001}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = O(\sqrt{n} \cdot \log n)$'
+      answer: false
+      explanation: 'False. $n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $\sqrt{n} \cdot \log n$ (polynomial times a logarithmic factor), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$2^n = O(n^3)$'
+      answer: false
+      explanation: 'False. $2^n$ is exponential and grows faster than $n^3$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^2 \log n = O(\log n)$'
+      answer: false
+      explanation: 'False. $n^2 \log n$ is polynomial times a logarithmic factor and grows faster than $\log n$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^3 = O(\sqrt{n})$'
+      answer: false
+      explanation: 'False. $n^3$ is polynomial and grows faster than $\sqrt{n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n = O(\log(n!))$'
+      answer: true
+      explanation: 'True. $n$ is polynomial and grows more slowly than $\log(n!)$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$7n \cdot \log n = O(n^{0.001})$'
+      answer: false
+      explanation: 'False. $7n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $n^{0.001}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = \Omega(8^{\log n})$'
+      answer: false
+      explanation: 'False. $n \cdot \log n$ is polynomial times a logarithmic factor and grows more slowly than $8^{\log n}$ (polynomial), so it is not $\Omega$ of it.'
+    - type: truefalse
+      prompt: '$\sqrt{n} = \Omega((\log n)^2)$'
+      answer: true
+      explanation: 'True. $\sqrt{n}$ is polynomial and grows faster than $(\log n)^2$ (polylogarithmic), so the $\Omega$ bound holds.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = \Omega(n^{2/3})$'
+      answer: true
+      explanation: 'True. $n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $n^{2/3}$ (polynomial), so the $\Omega$ bound holds.'
+- group: 'Asymptotic notation'
+  topic: 'Set 3'
+  intro: 'In the following, $\log n$ denotes the base-2 logarithm of $n$. Decide whether each statement is true or false.'
+  questions:
+    - type: truefalse
+      prompt: '$\sqrt{n} = O(n^{2/3})$'
+      answer: true
+      explanation: 'True. $\sqrt{n}$ is polynomial and grows more slowly than $n^{2/3}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$\log(n^2) = O(n \cdot \log n)$'
+      answer: true
+      explanation: 'True. $\log(n^2)$ is polylogarithmic and grows more slowly than $n \cdot \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n = O(n^{0.01})$'
+      answer: false
+      explanation: 'False. $n$ is polynomial and grows faster than $n^{0.01}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$4n = O(n)$'
+      answer: true
+      explanation: 'True. $4n$ and $n$ grow at the same rate (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$8^{\log n} = O(\log n)$'
+      answer: false
+      explanation: 'False. $8^{\log n}$ is polynomial and grows faster than $\log n$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$2^n = O(\log(n^2))$'
+      answer: false
+      explanation: 'False. $2^n$ is exponential and grows faster than $\log(n^2)$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$\log(n!) = O(n)$'
+      answer: false
+      explanation: 'False. $\log(n!)$ is polynomial times a logarithmic factor and grows faster than $n$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^2 = O(n^{0.001})$'
+      answer: false
+      explanation: 'False. $n^2$ is polynomial and grows faster than $n^{0.001}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$(\log n)^2 = O(n^{0.01})$'
+      answer: true
+      explanation: 'True. $(\log n)^2$ is polylogarithmic and grows more slowly than $n^{0.01}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n^{0.001} = \Omega(\log(n^2))$'
+      answer: true
+      explanation: 'True. $n^{0.001}$ is polynomial and grows faster than $\log(n^2)$ (polylogarithmic), so the $\Omega$ bound holds.'
+    - type: truefalse
+      prompt: '$n^2 \log n = \Omega(\sqrt{n})$'
+      answer: true
+      explanation: 'True. $n^2 \log n$ is polynomial times a logarithmic factor and grows faster than $\sqrt{n}$ (polynomial), so the $\Omega$ bound holds.'
+    - type: truefalse
+      prompt: '$3^n = \Omega(\log n)$'
+      answer: true
+      explanation: 'True. $3^n$ is exponential and grows faster than $\log n$ (polylogarithmic), so the $\Omega$ bound holds.'
+- group: 'Asymptotic notation'
+  topic: 'Set 4'
+  intro: 'In the following, $\log n$ denotes the base-2 logarithm of $n$. Decide whether each statement is true or false.'
+  questions:
+    - type: truefalse
+      prompt: '$n + \sqrt{n} = O(n \cdot \log n)$'
+      answer: true
+      explanation: 'True. $n + \sqrt{n}$ is polynomial and grows more slowly than $n \cdot \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$2^{3\log n} = O(n^n)$'
+      answer: true
+      explanation: 'True. $2^{3\log n}$ is polynomial and grows more slowly than $n^n$ (super-exponential), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$7n^3 = O(3^3)$'
+      answer: false
+      explanation: 'False. $7n^3$ is polynomial and grows faster than $3^3$ (constant), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^2 \log n = O(\sqrt{n})$'
+      answer: false
+      explanation: 'False. $n^2 \log n$ is polynomial times a logarithmic factor and grows faster than $\sqrt{n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = O(n^3)$'
+      answer: true
+      explanation: 'True. $n \cdot \log n$ is polynomial times a logarithmic factor and grows more slowly than $n^3$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$\log(n!) = O(n^3)$'
+      answer: true
+      explanation: 'True. $\log(n!)$ is polynomial times a logarithmic factor and grows more slowly than $n^3$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$2^n = O(2^{3\log n})$'
+      answer: false
+      explanation: 'False. $2^n$ is exponential and grows faster than $2^{3\log n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$5n^{2/3} \cdot n^{1/3} = O(n^n)$'
+      answer: true
+      explanation: 'True. $5n^{2/3} \cdot n^{1/3}$ is polynomial and grows more slowly than $n^n$ (super-exponential), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$\sqrt{n} = O(2^{\log n})$'
+      answer: true
+      explanation: 'True. $\sqrt{n}$ is polynomial and grows more slowly than $2^{\log n}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$\log n + \log n = \Theta(\log n)$'
+      answer: true
+      explanation: 'True. $\log n + \log n$ and $\log n$ are both polylogarithmic, the same growth rate, so the $\Theta$ bound holds.'
+    - type: truefalse
+      prompt: '$4\sqrt{n} \cdot \log n = \Omega(\sum_{i=1}^{n} i)$'
+      answer: false
+      explanation: 'False. $4\sqrt{n} \cdot \log n$ is polynomial times a logarithmic factor and grows more slowly than $\sum_{i=1}^{n} i$ (polynomial), so it is not $\Omega$ of it.'
+    - type: truefalse
+      prompt: '$(\log n)^3 = \Theta((\log n)^6)$'
+      answer: false
+      explanation: 'False. $(\log n)^3$ (polylogarithmic) and $(\log n)^6$ (polylogarithmic) have different growth rates, so the $\Theta$ bound does not hold.'
+- group: 'Asymptotic notation'
+  topic: 'Set 5'
+  intro: 'In the following, $\log n$ denotes the base-2 logarithm of $n$. Decide whether each statement is true or false.'
+  questions:
+    - type: truefalse
+      prompt: '$\log(n!) = O(n!)$'
+      answer: true
+      explanation: 'True. $\log(n!)$ is polynomial times a logarithmic factor and grows more slowly than $n!$ (factorial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$2^n = O(n^{0.1})$'
+      answer: false
+      explanation: 'False. $2^n$ is exponential and grows faster than $n^{0.1}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^{3/2} = O(n^2 \log n)$'
+      answer: true
+      explanation: 'True. $n^{3/2}$ is polynomial and grows more slowly than $n^2 \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$6n^2 = O(2^{\log n})$'
+      answer: false
+      explanation: 'False. $6n^2$ is polynomial and grows faster than $2^{\log n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$\log n = O(\sqrt{n} \cdot \log n)$'
+      answer: true
+      explanation: 'True. $\log n$ is polylogarithmic and grows more slowly than $\sqrt{n} \cdot \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$5\log n + n^2 = O(\log(n^2))$'
+      answer: false
+      explanation: 'False. $5\log n + n^2$ is polynomial and grows faster than $\log(n^2)$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$2^{3\log n} = O(n)$'
+      answer: false
+      explanation: 'False. $2^{3\log n}$ is polynomial and grows faster than $n$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$1 = O(n^{0.1})$'
+      answer: true
+      explanation: 'True. $1$ is constant and grows more slowly than $n^{0.1}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = O(n)$'
+      answer: false
+      explanation: 'False. $n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $n$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$1 = \Omega(n^{1/3})$'
+      answer: false
+      explanation: 'False. $1$ is constant and grows more slowly than $n^{1/3}$ (polynomial), so it is not $\Omega$ of it.'
+    - type: truefalse
+      prompt: '$6\log n = \Theta(4^{\log n})$'
+      answer: false
+      explanation: 'False. $6\log n$ (polylogarithmic) and $4^{\log n}$ (polynomial) have different growth rates, so the $\Theta$ bound does not hold.'
+    - type: truefalse
+      prompt: '$n^{0.001} = \Omega(\sqrt{n} \cdot \log n)$'
+      answer: false
+      explanation: 'False. $n^{0.001}$ is polynomial and grows more slowly than $\sqrt{n} \cdot \log n$ (polynomial times a logarithmic factor), so it is not $\Omega$ of it.'
+- group: 'Asymptotic notation'
+  topic: 'Set 6'
+  intro: 'In the following, $\log n$ denotes the base-2 logarithm of $n$. Decide whether each statement is true or false.'
+  questions:
+    - type: truefalse
+      prompt: '$\log n = O(2^{\log n})$'
+      answer: true
+      explanation: 'True. $\log n$ is polylogarithmic and grows more slowly than $2^{\log n}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$8^{\log n} = O(n^{2/3})$'
+      answer: false
+      explanation: 'False. $8^{\log n}$ is polynomial and grows faster than $n^{2/3}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$\sqrt{n} = O(n^{2/3})$'
+      answer: true
+      explanation: 'True. $\sqrt{n}$ is polynomial and grows more slowly than $n^{2/3}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$2^{\log n} = O(2^{2\log n})$'
+      answer: true
+      explanation: 'True. $2^{\log n}$ is polynomial and grows more slowly than $2^{2\log n}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$\log(n^2) = O(\log n)$'
+      answer: true
+      explanation: 'True. $\log(n^2)$ and $\log n$ grow at the same rate (polylogarithmic), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$\sqrt{n} \cdot \log n = O(\sqrt{n})$'
+      answer: false
+      explanation: 'False. $\sqrt{n} \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $\sqrt{n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$\log(n!)/7 = O(n^2 \log n)$'
+      answer: true
+      explanation: 'True. $\log(n!)/7$ is polynomial times a logarithmic factor and grows more slowly than $n^2 \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n! + \sqrt{n} \cdot (\log n)/3 = O(\sqrt{n})$'
+      answer: false
+      explanation: 'False. $n! + \sqrt{n} \cdot (\log n)/3$ is factorial and grows faster than $\sqrt{n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$\sqrt{n} = O((\log n)^3)$'
+      answer: false
+      explanation: 'False. $\sqrt{n}$ is polynomial and grows faster than $(\log n)^3$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$5\sqrt{n} + 2 \cdot 8^{\log n} = \Omega(n!)$'
+      answer: false
+      explanation: 'False. $5\sqrt{n} + 2 \cdot 8^{\log n}$ is polynomial and grows more slowly than $n!$ (factorial), so it is not $\Omega$ of it.'
+    - type: truefalse
+      prompt: '$8^{\log n} = \Theta(2^{3\log n})$'
+      answer: true
+      explanation: 'True. $8^{\log n}$ and $2^{3\log n}$ are both polynomial, the same growth rate, so the $\Theta$ bound holds.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = \Omega(2^{3\log n})$'
+      answer: false
+      explanation: 'False. $n \cdot \log n$ is polynomial times a logarithmic factor and grows more slowly than $2^{3\log n}$ (polynomial), so it is not $\Omega$ of it.'
+- group: 'Asymptotic notation'
+  topic: 'Set 7'
+  intro: 'In the following, $\log n$ denotes the base-2 logarithm of $n$. Decide whether each statement is true or false.'
+  questions:
+    - type: truefalse
+      prompt: '$1 + \log(n^2)/2 = O(\log n)$'
+      answer: true
+      explanation: 'True. $1 + \log(n^2)/2$ and $\log n$ grow at the same rate (polylogarithmic), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$2n = O(n \cdot \log n)$'
+      answer: true
+      explanation: 'True. $2n$ is polynomial and grows more slowly than $n \cdot \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$1 + 3^3 = O(2^{3\log n})$'
+      answer: true
+      explanation: 'True. $1 + 3^3$ is constant and grows more slowly than $2^{3\log n}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$7n \cdot \log n = O(\log n)$'
+      answer: false
+      explanation: 'False. $7n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $\log n$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n! = O((\log n)^3)$'
+      answer: false
+      explanation: 'False. $n!$ is factorial and grows faster than $(\log n)^3$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^2 \log n = O(\sqrt{n})$'
+      answer: false
+      explanation: 'False. $n^2 \log n$ is polynomial times a logarithmic factor and grows faster than $\sqrt{n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = O(\log(n^2))$'
+      answer: false
+      explanation: 'False. $n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $\log(n^2)$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^{2/3} = O(2^{3\log n})$'
+      answer: true
+      explanation: 'True. $n^{2/3}$ is polynomial and grows more slowly than $2^{3\log n}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$3n \cdot \log n = O(1)$'
+      answer: false
+      explanation: 'False. $3n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $1$ (constant), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n = \Theta(n^{0.1})$'
+      answer: false
+      explanation: 'False. $n$ (polynomial) and $n^{0.1}$ (polynomial) have different growth rates, so the $\Theta$ bound does not hold.'
+    - type: truefalse
+      prompt: '$\log n = \Omega(n \cdot \log n)$'
+      answer: false
+      explanation: 'False. $\log n$ is polylogarithmic and grows more slowly than $n \cdot \log n$ (polynomial times a logarithmic factor), so it is not $\Omega$ of it.'
+    - type: truefalse
+      prompt: '$4\log n = \Theta(\log n)$'
+      answer: true
+      explanation: 'True. $4\log n$ and $\log n$ are both polylogarithmic, the same growth rate, so the $\Theta$ bound holds.'
+- group: 'Asymptotic notation'
+  topic: 'Set 8'
+  intro: 'In the following, $\log n$ denotes the base-2 logarithm of $n$. Decide whether each statement is true or false.'
+  questions:
+    - type: truefalse
+      prompt: '$n \cdot \log n = O(\sqrt{n})$'
+      answer: false
+      explanation: 'False. $n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $\sqrt{n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^{0.01} = O(\sqrt{n} \cdot \log n)$'
+      answer: true
+      explanation: 'True. $n^{0.01}$ is polynomial and grows more slowly than $\sqrt{n} \cdot \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$4 \cdot 3^n = O(\log n)$'
+      answer: false
+      explanation: 'False. $4 \cdot 3^n$ is exponential and grows faster than $\log n$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^{2/3} = O(n^{2/3} \cdot n^{1/3})$'
+      answer: true
+      explanation: 'True. $n^{2/3}$ is polynomial and grows more slowly than $n^{2/3} \cdot n^{1/3}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$5^5 + n^{0.001} = O(n \cdot \log n)$'
+      answer: true
+      explanation: 'True. $5^5 + n^{0.001}$ is polynomial and grows more slowly than $n \cdot \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$\log(n^2) = O(\log n)$'
+      answer: true
+      explanation: 'True. $\log(n^2)$ and $\log n$ grow at the same rate (polylogarithmic), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$5n^{1/3} = O(\log n)$'
+      answer: false
+      explanation: 'False. $5n^{1/3}$ is polynomial and grows faster than $\log n$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$2^{3\log n} = O(n^3)$'
+      answer: true
+      explanation: 'True. $2^{3\log n}$ and $n^3$ grow at the same rate (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$6\sqrt{n} \cdot \log n = O(\sqrt{n})$'
+      answer: false
+      explanation: 'False. $6\sqrt{n} \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $\sqrt{n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n/6 = \Theta(n)$'
+      answer: true
+      explanation: 'True. $n/6$ and $n$ are both polynomial, the same growth rate, so the $\Theta$ bound holds.'
+    - type: truefalse
+      prompt: '$2^{2\log n} = \Theta(n\sqrt{n})$'
+      answer: false
+      explanation: 'False. $2^{2\log n}$ (polynomial) and $n\sqrt{n}$ (polynomial) have different growth rates, so the $\Theta$ bound does not hold.'
+    - type: truefalse
+      prompt: '$n^3 = \Theta(n \cdot \log n)$'
+      answer: false
+      explanation: 'False. $n^3$ (polynomial) and $n \cdot \log n$ (polynomial times a logarithmic factor) have different growth rates, so the $\Theta$ bound does not hold.'
+- group: 'Asymptotic notation'
+  topic: 'Set 9'
+  intro: 'In the following, $\log n$ denotes the base-2 logarithm of $n$. Decide whether each statement is true or false.'
+  questions:
+    - type: truefalse
+      prompt: '$\sqrt{n}/2 = O(\log(n^2))$'
+      answer: false
+      explanation: 'False. $\sqrt{n}/2$ is polynomial and grows faster than $\log(n^2)$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$2^n = O(n \cdot \log n)$'
+      answer: false
+      explanation: 'False. $2^n$ is exponential and grows faster than $n \cdot \log n$ (polynomial times a logarithmic factor), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$6\log(n!) + n \cdot \log n = O(2^{\log n})$'
+      answer: false
+      explanation: 'False. $6\log(n!) + n \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $2^{\log n}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$\log n = O(\sqrt{n} \cdot \log n)$'
+      answer: true
+      explanation: 'True. $\log n$ is polylogarithmic and grows more slowly than $\sqrt{n} \cdot \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$2 = O((\log n)^2)$'
+      answer: true
+      explanation: 'True. $2$ is constant and grows more slowly than $(\log n)^2$ (polylogarithmic), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$(\log n)^3 = O(n \cdot \log n)$'
+      answer: true
+      explanation: 'True. $(\log n)^3$ is polylogarithmic and grows more slowly than $n \cdot \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = O(2^n)$'
+      answer: true
+      explanation: 'True. $n \cdot \log n$ is polynomial times a logarithmic factor and grows more slowly than $2^n$ (exponential), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n^3 + n \cdot \log n = O(n \cdot \log n)$'
+      answer: false
+      explanation: 'False. $n^3 + n \cdot \log n$ is polynomial and grows faster than $n \cdot \log n$ (polynomial times a logarithmic factor), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$8^{\log n} = O(2^n)$'
+      answer: true
+      explanation: 'True. $8^{\log n}$ is polynomial and grows more slowly than $2^n$ (exponential), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n^{0.1}/6 = \Theta(n^n)$'
+      answer: false
+      explanation: 'False. $n^{0.1}/6$ (polynomial) and $n^n$ (super-exponential) have different growth rates, so the $\Theta$ bound does not hold.'
+    - type: truefalse
+      prompt: '$4^{\log n} = \Theta(\sum_{i=1}^{n} i)$'
+      answer: true
+      explanation: 'True. $4^{\log n}$ and $\sum_{i=1}^{n} i$ are both polynomial, the same growth rate, so the $\Theta$ bound holds.'
+    - type: truefalse
+      prompt: '$1 = \Theta(5^5)$'
+      answer: true
+      explanation: 'True. $1$ and $5^5$ are both constant, the same growth rate, so the $\Theta$ bound holds.'
+- group: 'Asymptotic notation'
+  topic: 'Set 10'
+  intro: 'In the following, $\log n$ denotes the base-2 logarithm of $n$. Decide whether each statement is true or false.'
+  questions:
+    - type: truefalse
+      prompt: '$n \cdot \log n = O(2^{2\log n})$'
+      answer: true
+      explanation: 'True. $n \cdot \log n$ is polynomial times a logarithmic factor and grows more slowly than $2^{2\log n}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$2^{3\log n} = O(n!)$'
+      answer: true
+      explanation: 'True. $2^{3\log n}$ is polynomial and grows more slowly than $n!$ (factorial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n = O(n \cdot \log n)$'
+      answer: true
+      explanation: 'True. $n$ is polynomial and grows more slowly than $n \cdot \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n = O(n\sqrt{n})$'
+      answer: true
+      explanation: 'True. $n$ is polynomial and grows more slowly than $n\sqrt{n}$ (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$3n = O(n)$'
+      answer: true
+      explanation: 'True. $3n$ and $n$ grow at the same rate (polynomial), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$\sqrt{n} + \sqrt{n} = O(n^{0.1})$'
+      answer: false
+      explanation: 'False. $\sqrt{n} + \sqrt{n}$ is polynomial and grows faster than $n^{0.1}$ (polynomial), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$\log(n!) + 6n^{3/2} = O(\log n)$'
+      answer: false
+      explanation: 'False. $\log(n!) + 6n^{3/2}$ is polynomial and grows faster than $\log n$ (polylogarithmic), so it is not $O$ of it.'
+    - type: truefalse
+      prompt: '$n^{0.1} = O(\sqrt{n} \cdot \log n)$'
+      answer: true
+      explanation: 'True. $n^{0.1}$ is polynomial and grows more slowly than $\sqrt{n} \cdot \log n$ (polynomial times a logarithmic factor), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n \cdot (\log n)/3 = O(2^n)$'
+      answer: true
+      explanation: 'True. $n \cdot (\log n)/3$ is polynomial times a logarithmic factor and grows more slowly than $2^n$ (exponential), so the $O$ bound holds.'
+    - type: truefalse
+      prompt: '$n \cdot \log n = \Theta(\log(n!))$'
+      answer: true
+      explanation: 'True. $n \cdot \log n$ and $\log(n!)$ are both polynomial times a logarithmic factor, the same growth rate, so the $\Theta$ bound holds.'
+    - type: truefalse
+      prompt: '$1 + 4 = \Theta(4^4)$'
+      answer: true
+      explanation: 'True. $1 + 4$ and $4^4$ are both constant, the same growth rate, so the $\Theta$ bound holds.'
+    - type: truefalse
+      prompt: '$\sqrt{n} \cdot \log n = \Omega(\sqrt{n})$'
+      answer: true
+      explanation: 'True. $\sqrt{n} \cdot \log n$ is polynomial times a logarithmic factor and grows faster than $\sqrt{n}$ (polynomial), so the $\Omega$ bound holds.'
+- group: 'Analysis of loops'
+  topic: 'Set 1'
+  intro: 'State the running time of each algorithm as a function of $n$ in $\Theta$-notation.'
+  questions:
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 1
+        while s <= n
+            s = s + 1
+      options:
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n)$.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 0
+        for i = 1 to n
+            for j = 1 to n
+                for k = 1 to n
+                    s = s + 1
+      options:
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^3)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 0
+        j = n
+        while i < j
+            i = i + 2
+            j = j + 1
+      options:
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n)$.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        for i = 1 to n
+            j = i
+            while j <= n
+                j = 2 * j
+      options:
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n)$.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+- group: 'Analysis of loops'
+  topic: 'Set 2'
+  intro: 'State the running time of each algorithm as a function of $n$ in $\Theta$-notation.'
+  questions:
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n
+            i = 2 * i
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\log n)$.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 1
+        for i = 1 to n
+            for j = i to n
+                s = s + 1
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^2)$.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        j = n
+        while i <= j
+            i = i * 2
+            j = floor(j / 2)
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\log n)$.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        for i = 1 to n
+            j = 0
+            while j <= n
+                j = j + i
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n\log n)$.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+- group: 'Analysis of loops'
+  topic: 'Set 3'
+  intro: 'State the running time of each algorithm as a function of $n$ in $\Theta$-notation.'
+  questions:
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 0
+        for i = 1 to n
+            for j = 1 to i * i
+                s = s + 1
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^3)$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n
+            i = 2 * i
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\log n)$.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n * n
+            i = 2 * i
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\log n)$.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n
+            j = 1
+            while j <= i
+                j = 2 * j
+            i = 2 * i
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta((\log n)^2)$.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+- group: 'Analysis of loops'
+  topic: 'Set 4'
+  intro: 'State the running time of each algorithm as a function of $n$ in $\Theta$-notation.'
+  questions:
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n
+            i = 2 * i
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(2^n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\log n)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = n
+        while i > 0
+            i = i - 1
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(2^n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n)$.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n * n
+            i = 3 * i
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(2^n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\log n)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        j = 1
+        s = 0
+        while s <= n
+            while j <= s
+                j = 2 * j
+            s = s + i
+            i = i + 1
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(2^n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\sqrt{n})$.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+- group: 'Analysis of loops'
+  topic: 'Set 5'
+  intro: 'State the running time of each algorithm as a function of $n$ in $\Theta$-notation.'
+  questions:
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 0
+        for i = 1 to n
+            for j = 1 to n
+                for k = 1 to n
+                    s = s + 1
+      options:
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^3)$.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\frac{\log n}{\log\log n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        for i = 1 to n
+            j = i
+            while j > 0
+                j = j - 1
+      options:
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\frac{\log n}{\log\log n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^2)$.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n
+            j = 0
+            while j <= n
+                j = j + 1
+            i = 2 * i
+      options:
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n\log n)$.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\frac{\log n}{\log\log n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = n
+        j = 0
+        while i > 0
+            if j < i
+                j = j + 1
+            else
+                j = 0
+                i = i - 1
+      options:
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\frac{\log n}{\log\log n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^2)$.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+- group: 'Analysis of loops'
+  topic: 'Set 6'
+  intro: 'State the running time of each algorithm as a function of $n$ in $\Theta$-notation.'
+  questions:
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n
+            j = 1
+            while j <= n
+                j = j + 1
+            i = i + 1
+      options:
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^2)$.'
+        - text: '$\Theta(n\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 0
+        for i = 1 to n
+            for j = 1 to i * i
+                s = s + 1
+      options:
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^3)$.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = n
+        while i <= n * n
+            i = 2 * i
+      options:
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\log n)$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n
+            j = i
+            while j <= n
+                j = j + 1
+            i = 2 * i
+      options:
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n\log n)$.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+- group: 'Analysis of loops'
+  topic: 'Set 7'
+  intro: 'State the running time of each algorithm as a function of $n$ in $\Theta$-notation.'
+  questions:
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 1
+        for i = 1 to n * n
+            for j = 1 to n
+                s = s + 1
+      options:
+        - text: '$\Theta(\sqrt{n}\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^3)$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 1
+        for i = 1 to n
+            s = s + 1
+      options:
+        - text: '$\Theta(\sqrt{n}\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n)$.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 0
+        i = n
+        while i > 0
+            for j = 1 to i
+                s = s + 1
+            i = i - 1
+      options:
+        - text: '$\Theta(\sqrt{n}\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^2)$.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = n
+        j = 0
+        while i > 0
+            if j < i
+                j = j + 1
+            else
+                j = 0
+                i = i - 1
+      options:
+        - text: '$\Theta(\sqrt{n}\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^2)$.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+- group: 'Analysis of loops'
+  topic: 'Set 8'
+  intro: 'State the running time of each algorithm as a function of $n$ in $\Theta$-notation.'
+  questions:
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 0
+        for i = 1 to n
+            for j = 1 to n
+                for k = 1 to n
+                    s = s + 1
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^3)$.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = n
+        while i > 0
+            i = i - 1
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n)$.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 2
+        while i <= n
+            i = i * i
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\log\log n)$.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        for i = 1 to n
+            j = i
+            while j <= n
+                j = 2 * j
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n)$.'
+        - text: '$\Theta(\log\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+- group: 'Analysis of loops'
+  topic: 'Set 9'
+  intro: 'State the running time of each algorithm as a function of $n$ in $\Theta$-notation.'
+  questions:
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        for i = 1 to n
+            j = i
+            while j > 0
+                j = j - 1
+      options:
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^2)$.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n
+            i = 2 * i
+      options:
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\log n)$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 0
+        i = 1
+        while s <= n
+            s = s + i
+            i = i + 1
+      options:
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\sqrt{n})$.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n
+            j = i
+            while j <= n
+                j = j + 1
+            i = 2 * i
+      options:
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n\log n)$.'
+- group: 'Analysis of loops'
+  topic: 'Set 10'
+  intro: 'State the running time of each algorithm as a function of $n$ in $\Theta$-notation.'
+  questions:
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        for i = 1 to n
+            j = i
+            while j > 0
+                j = j - 1
+      options:
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\frac{\log n}{\log\log n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(2^n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^2)$.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        s = 1
+        for i = n to 1 step -1
+            for j = n to 1 step -1
+                s = s + 1
+      options:
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\frac{\log n}{\log\log n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(2^n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n^2)$.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        while i <= n
+            j = 1
+            while j <= i
+                j = 2 * j
+            i = i + 1
+      options:
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(\frac{\log n}{\log\log n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(2^n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(n\log n)$.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+    - type: single
+      prompt: 'Running time of this algorithm:'
+      code: |
+        i = 1
+        j = n
+        while i <= j
+            i = 4 * i
+            j = 2 * j
+      options:
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'Correct — the running time is $\Theta(\log n)$.'
+        - text: '$\Theta(\frac{\log n}{\log\log n})$'
+          correct: false
+          feedback: 'Underestimates the running time.'
+        - text: '$\Theta(2^n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta((\log n)^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the running time.'
+- group: 'Recurrence relations'
+  topic: 'Set 1'
+  intro: 'State the asymptotic solution of each recurrence, with $T(n)=1$ for $n \le 1$.'
+  questions:
+    - type: single
+      prompt: '$T(n-1) + \log n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'Unrolling the recursion gives $\sum_{i=1}^{n}\log i=\log(n!)=\Theta(n\log n)$.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$4\,T(n/5) + n^3$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 3: the root work $f(n)=n3$ dominates, so the solution is $\Theta(n^3)$.'
+    - type: single
+      prompt: '$4\,T(n/2) + n^2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_2 4}=n^{2}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(n^2\log n)$.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$3\,T(n/5) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 3: the root work $f(n)=n$ dominates, so the solution is $\Theta(n)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$T(n-1) + n^2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'Unrolling the recursion gives $\sum_{i=1}^{n} i^2=\Theta(n^3)$.'
+- group: 'Recurrence relations'
+  topic: 'Set 2'
+  intro: 'State the asymptotic solution of each recurrence, with $T(n)=1$ for $n \le 1$.'
+  questions:
+    - type: single
+      prompt: '$T(n-1) + \log n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'Unrolling the recursion gives $\sum_{i=1}^{n}\log i=\log(n!)=\Theta(n\log n)$.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$4\,T(n/5) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 3: the root work $f(n)=n$ dominates, so the solution is $\Theta(n)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$T(n/3) + 3$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_3 1}=n^{0}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(\log n)$.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$2\,T(n/2) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_2 2}=n^{1}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(n\log n)$.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$3\,T(n/9) + 3$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_9 3}=n^{0.5}$ dominates, so the solution is $\Theta(\sqrt{n})$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+- group: 'Recurrence relations'
+  topic: 'Set 3'
+  intro: 'State the asymptotic solution of each recurrence, with $T(n)=1$ for $n \le 1$.'
+  questions:
+    - type: single
+      prompt: '$2\,T(n/4) + 2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_4 2}=n^{0.5}$ dominates, so the solution is $\Theta(\sqrt{n})$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$5\,T(n/5) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_5 5}=n^{1}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(n\log n)$.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$3\,T(n/9) + 1$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_9 3}=n^{0.5}$ dominates, so the solution is $\Theta(\sqrt{n})$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$8\,T(n/2) + 2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_2 8}=n^{3}$ dominates, so the solution is $\Theta(n^3)$.'
+    - type: single
+      prompt: '$4\,T(n/2) + n^2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_2 4}=n^{2}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(n^2\log n)$.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+- group: 'Recurrence relations'
+  topic: 'Set 4'
+  intro: 'State the asymptotic solution of each recurrence, with $T(n)=1$ for $n \le 1$.'
+  questions:
+    - type: single
+      prompt: '$2\,T(n/5) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 3: the root work $f(n)=n$ dominates, so the solution is $\Theta(n)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$4\,T(n/2) + 1$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_2 4}=n^{2}$ dominates, so the solution is $\Theta(n^2)$.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$4\,T(n/4) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_4 4}=n^{1}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(n\log n)$.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$T(n/4) + 3$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_4 1}=n^{0}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(\log n)$.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$T(n-1) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Unrolling the recursion gives $\sum_{i=1}^{n} i=\Theta(n^2)$.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+- group: 'Recurrence relations'
+  topic: 'Set 5'
+  intro: 'State the asymptotic solution of each recurrence, with $T(n)=1$ for $n \le 1$.'
+  questions:
+    - type: single
+      prompt: '$2\,T(n/4) + 1$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_4 2}=n^{0.5}$ dominates, so the solution is $\Theta(\sqrt{n})$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$5\,T(n/5) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_5 5}=n^{1}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(n\log n)$.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$8\,T(n/2) + 1$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_2 8}=n^{3}$ dominates, so the solution is $\Theta(n^3)$.'
+    - type: single
+      prompt: '$T(n-1) + 2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'Unrolling the recursion gives $\sum_{i=1}^{n}\Theta(1)=\Theta(n)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$T(n-1) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Unrolling the recursion gives $\sum_{i=1}^{n} i=\Theta(n^2)$.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+- group: 'Recurrence relations'
+  topic: 'Set 6'
+  intro: 'State the asymptotic solution of each recurrence, with $T(n)=1$ for $n \le 1$.'
+  questions:
+    - type: single
+      prompt: '$4\,T(n/2) + n^2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_2 4}=n^{2}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(n^2\log n)$.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$9\,T(n/3) + 3$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_3 9}=n^{2}$ dominates, so the solution is $\Theta(n^2)$.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$4\,T(n/2) + 2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_2 4}=n^{2}$ dominates, so the solution is $\Theta(n^2)$.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$2\,T(n/4) + 2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_4 2}=n^{0.5}$ dominates, so the solution is $\Theta(\sqrt{n})$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$8\,T(n/2) + 1$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_2 8}=n^{3}$ dominates, so the solution is $\Theta(n^3)$.'
+- group: 'Recurrence relations'
+  topic: 'Set 7'
+  intro: 'State the asymptotic solution of each recurrence, with $T(n)=1$ for $n \le 1$.'
+  questions:
+    - type: single
+      prompt: '$8\,T(n/2) + 2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_2 8}=n^{3}$ dominates, so the solution is $\Theta(n^3)$.'
+    - type: single
+      prompt: '$T(n/3) + 5$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_3 1}=n^{0}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(\log n)$.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$T(n-1) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Unrolling the recursion gives $\sum_{i=1}^{n} i=\Theta(n^2)$.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$2\,T(n/4) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 3: the root work $f(n)=n$ dominates, so the solution is $\Theta(n)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$3\,T(n/4) + n^3$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 3: the root work $f(n)=n3$ dominates, so the solution is $\Theta(n^3)$.'
+- group: 'Recurrence relations'
+  topic: 'Set 8'
+  intro: 'State the asymptotic solution of each recurrence, with $T(n)=1$ for $n \le 1$.'
+  questions:
+    - type: single
+      prompt: '$9\,T(n/3) + n^2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_3 9}=n^{2}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(n^2\log n)$.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$4\,T(n/2) + 2$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_2 4}=n^{2}$ dominates, so the solution is $\Theta(n^2)$.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$T(n/4) + 3$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 2: $n^{\log_4 1}=n^{0}$ matches $f(n)$, adding a $\log n$ factor, so the solution is $\Theta(\log n)$.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$3\,T(n/9) + 1$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: true
+          feedback: 'By the Master Theorem, case 1: the leaf work $n^{\log_9 3}=n^{0.5}$ dominates, so the solution is $\Theta(\sqrt{n})$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+    - type: single
+      prompt: '$3\,T(n/5) + n$'
+      options:
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(\sqrt{n})$'
+          correct: false
+          feedback: 'Underestimates the growth.'
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'By the Master Theorem, case 3: the root work $f(n)=n$ dominates, so the solution is $\Theta(n)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+        - text: '$\Theta(n^3)$'
+          correct: false
+          feedback: 'Overestimates the growth.'
+- group: 'Sorting'
+  topic: 'Concepts'
+  intro: 'Conceptual questions about classic sorting algorithms.'
+  questions:
+    - type: single
+      prompt: 'What is the worst-case running time of Quicksort (with a fixed pivot choice)?'
+      options:
+        - text: '$\Theta(n^2)$'
+          correct: true
+          feedback: 'Correct: if the pivot is always the minimum or maximum (e.g. an already-sorted array), the partitions have size $n-1$, giving $\Theta(n^2)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'That is the average case (and best case) of Quicksort, not the worst.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'No comparison-based algorithm sorts in linear time in the worst case.'
+        - text: '$\Theta(\log n)$'
+          correct: false
+          feedback: 'Impossible: you must examine all $n$ elements at least once.'
+    - type: single
+      prompt: 'What is the worst-case running time of Merge sort?'
+      options:
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'Correct: Merge sort always splits in half and merges in $\Theta(n)$, giving $\Theta(n\log n)$ in all cases.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'Merge sort does not degrade to quadratic; its recurrence $2T(n/2)+n$ is always $\Theta(n\log n)$.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'The merge phase is $\Theta(n)$, but it is repeated across $\log n$ levels.'
+        - text: '$\Theta(n^2\log n)$'
+          correct: false
+          feedback: 'This greatly overestimates the cost of Merge sort.'
+    - type: single
+      prompt: 'Which of these sorting algorithms is stable (preserves the relative order of equal elements)?'
+      options:
+        - text: 'Merge sort'
+          correct: true
+          feedback: 'Correct: when merging, choosing the element from the left half on ties preserves the relative order.'
+        - text: 'Heapsort'
+          correct: false
+          feedback: 'Heapsort is not stable: the heap operations reorder equal elements.'
+        - text: 'Quicksort (in-place)'
+          correct: false
+          feedback: 'In-place Quicksort partitioning swaps elements and does not preserve relative order.'
+        - text: 'Selection sort'
+          correct: false
+          feedback: 'Classic Selection sort is not stable: long-distance swaps disturb the order of equal elements.'
+    - type: single
+      prompt: 'What is the worst-case running time of Heapsort?'
+      options:
+        - text: '$\Theta(n\log n)$'
+          correct: true
+          feedback: 'Correct: building the heap is $\Theta(n)$ and the $n$ extractions cost $\Theta(\log n)$ each.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'That is the worst case of algorithms like Quicksort or Insertion sort, not Heapsort.'
+        - text: '$\Theta(n)$'
+          correct: false
+          feedback: 'Building the heap is $\Theta(n)$, but the extractions add a $\log n$ factor.'
+        - text: '$\Theta(n\log^2 n)$'
+          correct: false
+          feedback: 'Each heap operation is $\Theta(\log n)$, not $\Theta(\log^2 n)$.'
+    - type: single
+      prompt: 'What is the lower bound for sorting $n$ elements by comparisons?'
+      options:
+        - text: '$\Omega(n\log n)$'
+          correct: true
+          feedback: 'Correct: the decision tree has $n!$ leaves, and its height is $\Omega(\log(n!)) = \Omega(n\log n)$.'
+        - text: '$\Omega(n)$'
+          correct: false
+          feedback: 'Reading the input is $\Omega(n)$, but the comparison lower bound is stronger: $\Omega(n\log n)$.'
+        - text: '$\Omega(n^2)$'
+          correct: false
+          feedback: 'Too strong: Merge sort achieves $O(n\log n)$, contradicting that bound.'
+        - text: '$\Omega(\log n)$'
+          correct: false
+          feedback: 'Too weak: it does not even suffice to read all $n$ elements.'
+    - type: single
+      prompt: 'Counting sort on $n$ integers in the range $[0, k]$ runs in:'
+      options:
+        - text: '$\Theta(n + k)$'
+          correct: true
+          feedback: 'Correct: it scans the $n$ elements and a counting array of size $k$, with no comparisons.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Counting sort does not compare elements, so it avoids the $\Omega(n\log n)$ bound.'
+        - text: '$\Theta(n\log k)$'
+          correct: false
+          feedback: 'The counting array is scanned linearly in $k$, not logarithmically.'
+        - text: '$\Theta(nk)$'
+          correct: false
+          feedback: 'The $n$ and $k$ factors are added (two separate scans), not multiplied.'
+    - type: single
+      prompt: 'What is the best case of Insertion sort (for example, on an already-sorted array)?'
+      options:
+        - text: '$\Theta(n)$'
+          correct: true
+          feedback: 'Correct: with sorted input, each element is compared once with its predecessor, giving $\Theta(n)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Insertion sort uses no recursive splitting; its best case is linear.'
+        - text: '$\Theta(n^2)$'
+          correct: false
+          feedback: 'That is the worst case (reverse-order input), not the best.'
+        - text: '$\Theta(1)$'
+          correct: false
+          feedback: 'Even when sorted, you must scan all $n$ elements to verify it.'
+    - type: single
+      prompt: 'Radix sort of $n$ numbers with $d$ digits in base $b$ (using a stable per-digit sort) costs:'
+      options:
+        - text: '$\Theta(d\,(n + b))$'
+          correct: true
+          feedback: 'Correct: it makes $d$ passes and each is a counting sort of cost $\Theta(n + b)$.'
+        - text: '$\Theta(n\log n)$'
+          correct: false
+          feedback: 'Radix sort does not compare elements; its cost depends on $d$ and $b$, not $\log n$.'
+        - text: '$\Theta(d\,n\log n)$'
+          correct: false
+          feedback: 'Each pass uses counting sort ($\Theta(n+b)$), not a comparison sort.'
+        - text: '$\Theta(n + b)$'
+          correct: false
+          feedback: 'The factor $d$ is missing: one pass is made per each of the $d$ digits.'

@@ -1,0 +1,233 @@
+// Quiz styles — used on /quiz/ by assets/js/quiz.js.
+// Uses theme color variables so it adapts to the light/dark schemes automatically.
+
+$quiz-correct: #1a7f37;
+$quiz-wrong: #cf222e;
+@if $color-scheme == dark {
+  $quiz-correct: #4ac26b;
+  $quiz-wrong: #ff7b72;
+}
+
+#quiz-app {
+  margin-top: $sp-5;
+}
+
+.quiz-nav {
+  display: flex;
+  align-items: center;
+  gap: $sp-2;
+  margin-bottom: $sp-5;
+  padding-bottom: $sp-3;
+  border-bottom: 1px solid $border-color;
+}
+
+.quiz-select {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 28rem;
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 500;
+  padding: $sp-2 $sp-3;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background-color: $table-background-color;
+  color: $body-text-color;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: $link-color;
+    box-shadow: 0 0 0 3px rgba($link-color, 0.18);
+  }
+}
+
+.quiz-nav-btn {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2em;
+  line-height: 1;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background-color: $base-button-color;
+  color: $body-text-color;
+  cursor: pointer;
+  transition:
+    color 0.12s ease,
+    border-color 0.12s ease,
+    opacity 0.12s ease;
+
+  &:hover:not(:disabled) {
+    color: $link-color;
+    border-color: $link-color;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.quiz-nav-counter {
+  flex: 0 0 auto;
+  margin-left: auto;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: $search-result-preview-color;
+}
+
+.quiz-topic {
+  margin-bottom: $sp-4;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.quiz-intro {
+  color: $search-result-preview-color;
+  margin-bottom: $sp-4;
+}
+
+.quiz-questions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: quiz;
+}
+
+.quiz-q {
+  background-color: $table-background-color;
+  border: 1px solid $border-color;
+  border-left: 3px solid $border-color;
+  border-radius: $border-radius;
+  padding: $sp-4;
+  margin: 0 0 $sp-4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  &.is-correct {
+    border-left-color: $quiz-correct;
+  }
+
+  &.is-wrong {
+    border-left-color: $quiz-wrong;
+  }
+}
+
+.quiz-q {
+  counter-increment: quiz;
+}
+
+.quiz-prompt {
+  font-weight: 500;
+  margin-bottom: $sp-3;
+
+  &::before {
+    content: counter(quiz) ". ";
+    color: $link-color;
+    font-weight: 600;
+  }
+}
+
+.quiz-code {
+  background-color: $code-background-color;
+  border-radius: $border-radius;
+  padding: $sp-3;
+  margin: 0 0 $sp-3;
+  font-family: $mono-font-family;
+  font-size: 0.85em;
+  line-height: 1.5;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.quiz-option-row {
+  margin-bottom: $sp-1;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: baseline;
+  gap: $sp-2;
+  padding: $sp-2 $sp-3;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+
+  &:hover {
+    background-color: $base-button-color;
+  }
+
+  input[type="radio"] {
+    flex: 0 0 auto;
+    margin: 0;
+    accent-color: $link-color;
+  }
+}
+
+.quiz-option-row.is-correct .quiz-option {
+  background-color: rgba($quiz-correct, 0.12);
+  border-color: rgba($quiz-correct, 0.5);
+}
+
+.quiz-option-row.is-wrong .quiz-option {
+  background-color: rgba($quiz-wrong, 0.12);
+  border-color: rgba($quiz-wrong, 0.5);
+}
+
+.quiz-feedback {
+  margin: $sp-1 0 $sp-2 $sp-5;
+  padding: $sp-2 $sp-3;
+  font-size: 0.85em;
+  line-height: 1.5;
+  border-radius: $border-radius;
+  background-color: $feedback-color;
+  color: $body-text-color;
+  border-left: 2px solid $border-color;
+}
+
+.quiz-option-row.is-correct .quiz-feedback {
+  border-left-color: $quiz-correct;
+}
+
+.quiz-option-row.is-wrong .quiz-feedback {
+  border-left-color: $quiz-wrong;
+}
+
+.quiz-actions {
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+  margin-top: $sp-3;
+}
+
+.quiz-btn {
+  font-family: inherit;
+  font-size: 0.85em;
+  font-weight: 500;
+  padding: $sp-2 $sp-4;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background-color: $base-button-color;
+  color: $body-text-color;
+  cursor: pointer;
+  transition: filter 0.12s ease;
+
+  &:hover {
+    filter: brightness(0.96);
+  }
+}
+
+.quiz-validate {
+  background-color: $btn-primary-color;
+  border-color: $btn-primary-color;
+  color: #fff;
+}
+
+.quiz-score {
+  font-size: 0.85em;
+  font-weight: 500;
+  color: $search-result-preview-color;
+}

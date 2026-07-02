@@ -43,3 +43,10 @@
     - tag: FP3
       title: Project Presentation
       url: /assignments/fp3-project-presentation
+
+- heading: Practice
+  description: Self-assessment quizzes with per-option feedback to review the course topics.
+  items:
+    - title: Topic Quizzes
+      url: /quiz/
+      icon: quiz
