@@ -85,6 +85,15 @@ $quiz-wrong: #cf222e;
   }
 }
 
+.quiz-title {
+  margin-top: 0;
+  margin-bottom: $sp-4;
+  padding-bottom: $sp-2;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: 1px solid $border-color;
+}
+
 .quiz-intro {
   color: $search-result-preview-color;
   margin-bottom: $sp-4;

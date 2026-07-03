@@ -170,11 +170,18 @@
     return chosenCorrect;
   }
 
+  // Display label for a topic: "<number> <section name>" (e.g. "1 Asymptotic notation").
+  function topicLabel(topic, topicIndex) {
+    return (topicIndex + 1) + ' ' + (topic.group || topic.topic || ('Topic ' + (topicIndex + 1)));
+  }
+
   function renderTopic(topic, topicIndex, store) {
+    var label = topicLabel(topic, topicIndex);
     var section = el('section', 'quiz-topic');
     section.setAttribute('role', 'tabpanel');
-    section.setAttribute('aria-label', topic.topic);
+    section.setAttribute('aria-label', label);
 
+    section.appendChild(el('h2', 'quiz-title', label));
     if (topic.intro) section.appendChild(el('p', 'quiz-intro', topic.intro));
 
     var questions = (topic.questions || []).map(normalizeQuestion);
@@ -259,7 +266,7 @@
     var frag = document.createDocumentFragment();
     var optParent = {};
     data.forEach(function (topic, ti) {
-      var option = el('option', null, topic.topic || ('Topic ' + (ti + 1)));
+      var option = el('option', null, topicLabel(topic, ti));
       option.value = String(ti);
       if (topic.group) {
         if (!optParent[topic.group]) {
