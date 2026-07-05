@@ -1,3 +1,14 @@
+- heading: Past Slides
+  icon: slider
+  description: >
+    This folder contains lecture slides used by the instructor in previous
+    Advanced Data Algorithms (ADA) courses at FISI-UNMSM. It is highly
+    recommended that you review the corresponding slides before each class so
+    you arrive prepared and can use the class time to clarify your questions,
+    as the ADA course is rigorous and fast-paced.
+  url: https://drive.google.com/drive/folders/1VfpWDVilNEa2kw-UpTl4WmkfZ7plUQt5?usp=drive_link
+  external: true
+  
 - heading: Textbooks
   icon: book
   description: While this course does not explicitly follow a specific textbook, the following are useful references on many of the topics covered.
