@@ -9,5 +9,4 @@
   weight: 30%
   description: Solve each question by clearly demonstrating how the solution is obtained. Then, perform a complete complexity analysis of your proposed solution, including its time complexity using O(g(n)) notation.
   items:
-    - title: Partial Exam
-    - title: Final Exam      
+    - title: Partial and Final Exams      
