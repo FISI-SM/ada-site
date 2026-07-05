@@ -20,11 +20,7 @@ The goal of this course is to provide undergraduate students in Computer Science
 
 {% include cards.html data="content" %}
 
-## Late Policy
+## Recommendations
 
-| Item | Penalty | Maximum delay |
-|---|---|---|
-| Programming Assignments & Final Project | 15% for each day of delay | 2 days |
-
-{: .warning }
-> **Quizzes.** If you need to miss a quiz, notify the instructor in advance so that another date can be scheduled.
+{: .important }
+> **Important:** After each topic covered in class, review the corresponding material in the recommended textbooks. Then, solve the exercises independently before discussing your solutions with your classmates or working on additional problems together.
