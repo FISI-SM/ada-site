@@ -14,7 +14,7 @@ description: Listing of course modules and topics.
       <th>Date</th>
       <th>Lectures</th>
       <th>Readings</th>
-      <th>Assignments</th>
+      <th>Practice</th>
     </tr>
   </thead>
 
@@ -39,7 +39,7 @@ description: Listing of course modules and topics.
     <td>16/09</td>
     <td>Asymptotic Notation (O, Ω, Θ)</td>
     <td></td>
-    <td rowspan="3">Programming Assignment 1</td>
+    <td rowspan="3">Practice Assignment 1</td>
   </tr>
   <tr>
     <td>18/09</td>
@@ -67,7 +67,7 @@ description: Listing of course modules and topics.
     <td>30/09</td>
     <td>Graph Algorithms I (BFS and DFS)</td>
     <td></td>
-    <td rowspan="3">Programming Assignment 2</td>
+    <td rowspan="3">Practice Assignment 2</td>
   </tr>
   <tr>
     <td>02/10</td>
@@ -101,7 +101,7 @@ description: Listing of course modules and topics.
     <td>16/10</td>
     <td>Divide and Conquer I</td>
     <td></td>
-    <td rowspan="3">Programming Assignment 3</td>
+    <td rowspan="3">Practice Assignment 3</td>
   </tr>
 
   <!-- Week 7 -->
@@ -128,7 +128,7 @@ description: Listing of course modules and topics.
     <td>30/10</td>
     <td>Dynamic Programming II</td>
     <td></td>
-    <td rowspan="3">Programming Assignment 4</td>
+    <td rowspan="3">Practice Assignment 4</td>
   </tr>
 
   <!-- Week 9 -->
