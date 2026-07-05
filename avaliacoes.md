@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Assignments
+title: Practice
 nav_exclude: false
 description: A feed containing all of the class announcements.
 ---
 
-# Assignments
+# Practice
 
 Grade breakdown for the course.
 {: .lead }
 
-{% include cards.html data="assignments" %}
+{% include cards.html data="practice" %}
