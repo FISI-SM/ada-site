@@ -7,7 +7,7 @@
 
 - heading: Past Exams
   weight: 30%
-  description: Solved each question demostrating how obtain the solution and after take a complete complexity analise O(g(n)) of your solution proposal.
+  description: Solve each question by clearly demonstrating how the solution is obtained. Then, perform a complete complexity analysis of your proposed solution, including its time complexity using O(g(n)) notation.
   items:
     - title: Partial Exam
     - title: Final Exam      
