@@ -59,6 +59,9 @@ brand_links:
   - name: Herminio Paucar C.
     url: 'https://hpaucar.github.io'
     logo: '/assets/images/herminio.webp'
+  - name: LinkTree
+    url: 'https://linktr.ee/fisi_unmsm'
+    logo: '/assets/images/Linktree.webp'    
   - name: FISI
     url: 'https://sistemas.unmsm.edu.pe'
     logo: '/assets/images/fisi.webp'
