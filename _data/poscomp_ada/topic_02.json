@@ -1,0 +1,110 @@
+[
+  {
+    "id": "ada02_2012_q25",
+    "category_id": "02",
+    "category": "Sorting Algorithms",
+    "source": "POSCOMP 2012 Q25",
+    "pdf_page": 320,
+    "question_en": "For a vector $V$ of $n$ nonnegative integers whose maximum value is $m$, which statements about sorting are correct? I. QuickSort and MergeSort take $\\Omega(n \\log n)$ time to sort $V$. II. If $m = O(n)$, $V$ can be sorted in $O(n)$ worst-case time. III. QuickSort has $O(n \\log n)$ worst-case time when $m = O(n)$. IV. If $n = O(m)$, Counting Sort is more efficient than MergeSort as a function of $n$.",
+    "choices": {
+      "A": "Only I and II are correct.",
+      "B": "Only I and III are correct.",
+      "C": "Only II and IV are correct.",
+      "D": "Only III and IV are correct.",
+      "E": "All statements are correct."
+    },
+    "correct_option": "A",
+    "correct_answer_en": "Only I and II are correct.",
+    "explanation_en": "Comparison sorting has an $\\Omega(n \\log n)$ lower bound, while Counting Sort is linear when the key range $m$ is $O(n)$. QuickSort still has quadratic worst-case behavior, so III is false."
+  },
+  {
+    "id": "ada02_2018_q23",
+    "category_id": "02",
+    "category": "Sorting Algorithms",
+    "source": "POSCOMP 2018 Q23",
+    "pdf_page": 492,
+    "question_en": "An algorithm repeatedly selects the smallest item in the unsorted part of an array and swaps it into the first remaining position. Which sorting method is being described?",
+    "choices": {
+      "A": "Selection sort",
+      "B": "Insertion sort",
+      "C": "Merge sort",
+      "D": "Quick sort",
+      "E": "Heap sort"
+    },
+    "correct_option": "A",
+    "correct_answer_en": "Selection sort",
+    "explanation_en": "Selection sort repeatedly selects the minimum remaining element and places it in its final sorted position."
+  },
+  {
+    "id": "ada02_2013_q36",
+    "category_id": "02",
+    "category": "Sorting Algorithms",
+    "source": "POSCOMP 2013 Q36",
+    "pdf_page": 349,
+    "question_en": "Which statements about choosing sorting algorithms are correct? I. HeapSort is appropriate when worst-case behavior matters. II. Insertion Sort is appropriate when the array is almost sorted. III. QuickSort is usually good for average-case performance. IV. Bubble Sort is ideal when best and worst case must have the same complexity.",
+    "choices": {
+      "A": "Only I and II are correct.",
+      "B": "Only II and III are correct.",
+      "C": "Only I and IV are correct.",
+      "D": "Only I, II, and III are correct.",
+      "E": "All statements are correct."
+    },
+    "correct_option": "D",
+    "correct_answer_en": "Only I, II, and III are correct.",
+    "explanation_en": "HeapSort has $O(n \\log n)$ worst-case time, Insertion Sort performs well on nearly sorted data, and QuickSort is strong on average. Bubble Sort is not ideal for equal best/worst complexity."
+  },
+  {
+    "id": "ada02_2011_q25",
+    "category_id": "02",
+    "category": "Sorting Algorithms",
+    "source": "POSCOMP 2011 Q25",
+    "pdf_page": 294,
+    "question_en": "Which description best matches QuickSort?",
+    "choices": {
+      "A": "Repeatedly inserts each element into a sorted prefix.",
+      "B": "Builds a heap and repeatedly extracts the maximum element.",
+      "C": "Splits the input into halves, sorts them, and merges the results.",
+      "D": "Chooses a pivot, partitions elements around it, and recursively sorts the partitions.",
+      "E": "Counts the number of elements with each key value."
+    },
+    "correct_option": "D",
+    "correct_answer_en": "Chooses a pivot, partitions elements around it, and recursively sorts the partitions.",
+    "explanation_en": "QuickSort is defined by pivot selection, partitioning into smaller/larger groups, and recursive sorting of those groups."
+  },
+  {
+    "id": "ada02_2013_q33",
+    "category_id": "02",
+    "category": "Sorting Algorithms",
+    "source": "POSCOMP 2013 Q33",
+    "pdf_page": 348,
+    "question_en": "What is the asymptotic time complexity of MergeSort on an input of size $n$?",
+    "choices": {
+      "A": "$O(n)$",
+      "B": "$O(n \\log n)$",
+      "C": "$O(n^2)$",
+      "D": "$O(\\log n)$",
+      "E": "$O(2^n)$"
+    },
+    "correct_option": "B",
+    "correct_answer_en": "$O(n \\log n)$",
+    "explanation_en": "MergeSort solves two subproblems of size $n/2$ and merges in linear time, giving $T(n)=2T(n/2)+O(n)=O(n \\log n)$."
+  },
+  {
+    "id": "ada02_2022_q21",
+    "category_id": "02",
+    "category": "Sorting Algorithms",
+    "source": "POSCOMP 2022 Q21",
+    "pdf_page": 539,
+    "question_en": "MergeSort, Kruskal's minimum spanning tree algorithm, and Floyd-Warshall are examples of which algorithmic paradigms, respectively?",
+    "choices": {
+      "A": "Greedy, dynamic programming, divide and conquer",
+      "B": "Divide and conquer, dynamic programming, greedy",
+      "C": "Greedy, divide and conquer, dynamic programming",
+      "D": "Dynamic programming, divide and conquer, greedy",
+      "E": "Divide and conquer, greedy, dynamic programming"
+    },
+    "correct_option": "E",
+    "correct_answer_en": "Divide and conquer, greedy, dynamic programming",
+    "explanation_en": "MergeSort divides and combines subproblems, Kruskal greedily adds safe edges, and Floyd-Warshall uses dynamic programming over intermediate vertices."
+  }
+]

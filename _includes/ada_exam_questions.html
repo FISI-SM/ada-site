@@ -1,0 +1,51 @@
+{%- assign topic_key = include.topic -%}
+{%- assign questions = site.data.poscomp_ada[topic_key] -%}
+{%- if questions and questions.size > 0 -%}
+<section class="quiz-topic ada-exam-topic" data-storage-key="ada-poscomp-{{ topic_key }}">
+<ol class="quiz-questions ada-exam-list">
+  {%- for q in questions -%}
+  <li id="{{ q.id }}" class="quiz-q ada-exam-question" data-correct-option="{{ q.correct_option }}">
+    <p class="ada-exam-source">
+      {{ q.source }} - PDF page {{ q.pdf_page }}
+      {%- if q.requires_visual %} - Requires original figure/table{% endif -%}
+    </p>
+    <div class="quiz-prompt ada-exam-prompt">{{ q.question_en | markdownify }}</div>
+    <div class="quiz-options ada-exam-options">
+      {%- for opt in q.choices -%}
+      <div class="quiz-option-row ada-exam-option-row" data-option="{{ opt[0] }}">
+        <label class="quiz-option ada-exam-option">
+          <input type="radio" name="{{ q.id }}" value="{{ opt[0] }}">
+          <span class="quiz-opt-text ada-exam-option-text"><strong>{{ opt[0] }})</strong> {{ opt[1] }}</span>
+        </label>
+        {%- if opt[0] == q.correct_option -%}
+        <div class="quiz-feedback ada-exam-feedback" hidden>
+          <div><strong>Correct answer:</strong> {{ q.correct_option }}) {{ q.correct_answer_en }}</div>
+          <div>{{ q.explanation_en | markdownify }}</div>
+        </div>
+        {%- else -%}
+        <div class="quiz-feedback ada-exam-feedback" hidden></div>
+        {%- endif -%}
+      </div>
+      {%- endfor -%}
+    </div>
+  </li>
+  {%- endfor -%}
+</ol>
+<div class="quiz-actions ada-exam-actions">
+  <button class="quiz-btn quiz-validate ada-exam-validate" type="button">Validate</button>
+  <button class="quiz-btn ada-exam-clear" type="button">Clear</button>
+  <span class="quiz-score ada-exam-score" aria-live="polite" hidden></span>
+</div>
+</section>
+{%- else -%}
+<p>No questions available for this topic yet.</p>
+{%- endif -%}
+
+<script>
+  window.MathJax = window.MathJax || {
+    tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] },
+    options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="{{ '/assets/js/ada-exam.js' | relative_url }}" defer></script>

@@ -4,6 +4,10 @@
     - title: Topic Quizzes
       url: /quiz/
       icon: quiz
+    - title: POSCOMP ADA Questions
+      url: /practice/poscomp-ada/
+      icon: quiz
+      source: By topic
 
 - heading: Past Exams
   weight: 30%

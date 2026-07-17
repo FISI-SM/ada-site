@@ -1,0 +1,92 @@
+[
+  {
+    "id": "ada06_2016_q25",
+    "category_id": "06",
+    "category": "Divide and Conquer",
+    "source": "POSCOMP 2016 Q25",
+    "pdf_page": 421,
+    "question_en": "Which paradigm divides a problem into smaller parts, solves those parts, and combines their solutions into a global solution?",
+    "choices": {
+      "A": "Divide and conquer",
+      "B": "Greedy",
+      "C": "Approximation",
+      "D": "Heuristic",
+      "E": "Trial and error"
+    },
+    "correct_option": "A",
+    "correct_answer_en": "Divide and conquer",
+    "explanation_en": "Divide and conquer is characterized by decomposition into subproblems, recursive solution, and recombination."
+  },
+  {
+    "id": "ada06_2022_q21",
+    "category_id": "06",
+    "category": "Divide and Conquer",
+    "source": "POSCOMP 2022 Q21",
+    "pdf_page": 539,
+    "question_en": "MergeSort, Kruskal's minimum spanning tree algorithm, and Floyd-Warshall are examples of which algorithmic paradigms, respectively?",
+    "choices": {
+      "A": "Greedy, dynamic programming, divide and conquer",
+      "B": "Divide and conquer, dynamic programming, greedy",
+      "C": "Greedy, divide and conquer, dynamic programming",
+      "D": "Dynamic programming, divide and conquer, greedy",
+      "E": "Divide and conquer, greedy, dynamic programming"
+    },
+    "correct_option": "E",
+    "correct_answer_en": "Divide and conquer, greedy, dynamic programming",
+    "explanation_en": "MergeSort is the divide-and-conquer algorithm in the list because it splits, recursively sorts, and merges."
+  },
+  {
+    "id": "ada06_2008_q18",
+    "category_id": "06",
+    "category": "Divide and Conquer",
+    "source": "POSCOMP 2008 Q18",
+    "pdf_page": 190,
+    "question_en": "Which statements about dynamic programming, divide and conquer, and greedy algorithms are true?",
+    "choices": {
+      "A": "Only statement I is true.",
+      "B": "Only statement II is true.",
+      "C": "Only statements I and II are true.",
+      "D": "Only statements II and III are true.",
+      "E": "All statements are true."
+    },
+    "correct_option": "C",
+    "correct_answer_en": "Only statements I and II are true.",
+    "explanation_en": "The divide-and-conquer statement is true: it recursively decomposes the problem into independent subproblems and combines their solutions."
+  },
+  {
+    "id": "ada06_2013_q33",
+    "category_id": "06",
+    "category": "Divide and Conquer",
+    "source": "POSCOMP 2013 Q33",
+    "pdf_page": 348,
+    "question_en": "A MergeSort implementation recursively sorts the left and right halves and then merges them. What is its time complexity?",
+    "choices": {
+      "A": "$O(n)$",
+      "B": "$O(n \\log n)$",
+      "C": "$O(n^2)$",
+      "D": "$O(\\log n)$",
+      "E": "$O(2^n)$"
+    },
+    "correct_option": "B",
+    "correct_answer_en": "$O(n \\log n)$",
+    "explanation_en": "The recurrence $T(n)=2T(n/2)+O(n)$ solves to $O(n \\log n)$."
+  },
+  {
+    "id": "ada06_2011_q25",
+    "category_id": "06",
+    "category": "Divide and Conquer",
+    "source": "POSCOMP 2011 Q25",
+    "pdf_page": 294,
+    "question_en": "Which sorting description uses the divide-and-conquer idea of choosing a pivot and recursively processing partitions?",
+    "choices": {
+      "A": "Insertion sort",
+      "B": "Heap sort",
+      "C": "Merge sort",
+      "D": "QuickSort",
+      "E": "Counting sort"
+    },
+    "correct_option": "D",
+    "correct_answer_en": "QuickSort",
+    "explanation_en": "QuickSort partitions around a pivot and recursively sorts the subarrays, which is a divide-and-conquer structure."
+  }
+]

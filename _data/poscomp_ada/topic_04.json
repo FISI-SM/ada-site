@@ -1,0 +1,148 @@
+[
+  {
+    "id": "ada04_2012_q35",
+    "category_id": "04",
+    "category": "Graph Algorithms",
+    "source": "POSCOMP 2012 Q35",
+    "pdf_page": 324,
+    "question_en": "Which graph algorithm takes a weighted undirected graph, sorts edges by weight, and chooses edges without forming cycles?",
+    "choices": {
+      "A": "Topological sort",
+      "B": "Kruskal's algorithm",
+      "C": "Dijkstra's algorithm",
+      "D": "Breadth-first search",
+      "E": "Floyd-Warshall"
+    },
+    "correct_option": "B",
+    "correct_answer_en": "Kruskal's algorithm",
+    "explanation_en": "Kruskal's algorithm builds a minimum spanning tree by processing edges in increasing weight order and skipping edges that would create cycles."
+  },
+  {
+    "id": "ada04_2014_q37",
+    "category_id": "04",
+    "category": "Graph Algorithms",
+    "source": "POSCOMP 2014 Q37",
+    "pdf_page": 373,
+    "question_en": "Which algorithm computes shortest paths between all pairs of vertices in a weighted graph?",
+    "choices": {
+      "A": "Bellman-Ford",
+      "B": "Floyd-Warshall",
+      "C": "Dijkstra",
+      "D": "Kruskal",
+      "E": "Prim"
+    },
+    "correct_option": "B",
+    "correct_answer_en": "Floyd-Warshall",
+    "explanation_en": "Floyd-Warshall is the standard dynamic-programming algorithm for all-pairs shortest paths."
+  },
+  {
+    "id": "ada04_2018_q36",
+    "category_id": "04",
+    "category": "Graph Algorithms",
+    "source": "POSCOMP 2018 Q36",
+    "pdf_page": 497,
+    "question_en": "A graph search explores edges from the most recently discovered vertex that still has unexplored outgoing edges, then backtracks when needed. Which algorithm is this?",
+    "choices": {
+      "A": "Breadth-first search",
+      "B": "Depth-first search",
+      "C": "Dijkstra's algorithm",
+      "D": "Kruskal's algorithm",
+      "E": "Topological sort"
+    },
+    "correct_option": "B",
+    "correct_answer_en": "Depth-first search",
+    "explanation_en": "Depth-first search follows one branch as far as possible and backtracks when the current vertex has no unexplored outgoing edges."
+  },
+  {
+    "id": "ada04_2022_q21",
+    "category_id": "04",
+    "category": "Graph Algorithms",
+    "source": "POSCOMP 2022 Q21",
+    "pdf_page": 539,
+    "question_en": "MergeSort, Kruskal's minimum spanning tree algorithm, and Floyd-Warshall are examples of which algorithmic paradigms, respectively?",
+    "choices": {
+      "A": "Greedy, dynamic programming, divide and conquer",
+      "B": "Divide and conquer, dynamic programming, greedy",
+      "C": "Greedy, divide and conquer, dynamic programming",
+      "D": "Dynamic programming, divide and conquer, greedy",
+      "E": "Divide and conquer, greedy, dynamic programming"
+    },
+    "correct_option": "E",
+    "correct_answer_en": "Divide and conquer, greedy, dynamic programming",
+    "explanation_en": "Kruskal is the graph-algorithm item here: it greedily constructs a minimum spanning tree."
+  },
+  {
+    "id": "ada04_2018_q37",
+    "category_id": "04",
+    "category": "Graph Algorithms",
+    "source": "POSCOMP 2018 Q37",
+    "pdf_page": 497,
+    "question_en": "What is a topological ordering of a directed acyclic graph $G=(V,E)$?",
+    "choices": {
+      "A": "An ordering where every vertex has the same degree.",
+      "B": "An ordering that minimizes total edge weight.",
+      "C": "A linear ordering of vertices such that for every edge (u,v), u appears before v.",
+      "D": "A traversal that always visits nearest vertices first.",
+      "E": "A shortest-path tree from a source vertex."
+    },
+    "correct_option": "C",
+    "correct_answer_en": "A linear ordering of vertices such that for every edge (u,v), u appears before v.",
+    "explanation_en": "Topological sorting is defined for DAGs and places each predecessor before its successors."
+  },
+  {
+    "id": "ada04_2016_q36",
+    "category_id": "04",
+    "category": "Graph Algorithms",
+    "source": "POSCOMP 2016 Q36",
+    "pdf_page": 424,
+    "requires_visual": true,
+    "question_en": "Given a weighted undirected graph and a proposed spanning tree, which statement correctly identifies the minimum spanning tree shown?",
+    "choices": {
+      "A": "The tree is a minimum spanning tree of total weight 12 and is not unique.",
+      "B": "The tree is not spanning because it omits a vertex.",
+      "C": "The tree is a shortest-path tree from vertex 1.",
+      "D": "The tree is unique because all edge weights are distinct.",
+      "E": "The tree has maximum total weight."
+    },
+    "correct_option": "A",
+    "correct_answer_en": "The tree is a minimum spanning tree of total weight 12 and is not unique.",
+    "explanation_en": "The official key states that the shown tree has minimum total weight 12, and another edge substitution yields a different tree with the same total cost."
+  },
+  {
+    "id": "ada04_2009_q30",
+    "category_id": "04",
+    "category": "Graph Algorithms",
+    "source": "POSCOMP 2009 Q30",
+    "pdf_page": 233,
+    "requires_visual": true,
+    "question_en": "Using breadth-first search from vertex A in the given graph, what is the vertex discovery order?",
+    "choices": {
+      "A": "A B C D E F",
+      "B": "A C B D E F",
+      "C": "A D E B C F",
+      "D": "F E D C B A",
+      "E": "A F E D C B"
+    },
+    "correct_option": "A",
+    "correct_answer_en": "A B C D E F",
+    "explanation_en": "Breadth-first search discovers vertices level by level from the source A; the official traversal order is A, B, C, D, E, F."
+  },
+  {
+    "id": "ada04_2008_q28",
+    "category_id": "04",
+    "category": "Graph Algorithms",
+    "source": "POSCOMP 2008 Q28",
+    "pdf_page": 196,
+    "question_en": "For a graph $G=(V,E)$, which evaluation of the given tree/spanning-tree statements is correct?",
+    "choices": {
+      "A": "All statements are true.",
+      "B": "Only statements II and IV are true.",
+      "C": "Only statement I is false.",
+      "D": "Only statement III is false.",
+      "E": "All statements are false."
+    },
+    "correct_option": "C",
+    "correct_answer_en": "Only statement I is false.",
+    "explanation_en": "The official key marks only the first statement false; the remaining statements match standard properties of cycles, connected graphs, and spanning trees."
+  }
+]
