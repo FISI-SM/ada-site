@@ -1,0 +1,19 @@
+.ada-exam-source {
+  margin: 0 0 $sp-1;
+  color: $body-text-color;
+  font-size: 0.85rem;
+  opacity: 0.72;
+}
+
+.ada-exam-prompt p,
+.ada-exam-feedback p {
+  margin: 0;
+}
+
+.ada-exam-feedback div + div {
+  margin-top: $sp-1;
+}
+
+.ada-exam-actions {
+  margin-bottom: $sp-5;
+}

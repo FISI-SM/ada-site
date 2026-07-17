@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ada03_2008_q38",
+    "category_id": "03",
+    "category": "Selection Algorithms",
+    "source": "POSCOMP 2008 Q38",
+    "pdf_page": 203,
+    "question_en": "For an array sorted in increasing order and supporting random access, what is the key idea for finding the i-th largest element?",
+    "choices": {
+      "A": "It requires scanning the entire array.",
+      "B": "It requires sorting the array again.",
+      "C": "It can be obtained by direct indexing from the end of the array.",
+      "D": "It requires building a heap.",
+      "E": "It requires a graph traversal."
+    },
+    "correct_option": "C",
+    "correct_answer_en": "It can be obtained by direct indexing from the end of the array.",
+    "explanation_en": "In a sorted array, the i-th largest element is at a known position relative to the end, so random access makes the selection constant time."
+  }
+]

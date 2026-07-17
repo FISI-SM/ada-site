@@ -1,0 +1,110 @@
+[
+  {
+    "id": "ada01_2024_q21",
+    "category_id": "01",
+    "category": "Algorithm Analysis and Complexity",
+    "source": "POSCOMP 2024 Q21",
+    "pdf_page": 578,
+    "question_en": "A file stores records, each with a unique key. A sequential search scans the records in order until the desired key is found or the file ends. If $f(n)$ is the number of records consulted, which statement is correct?",
+    "choices": {
+      "A": "The average case is $f(n) = (n + 1)/2$.",
+      "B": "The best case is $f(n) = n - 1$.",
+      "C": "The optimal case is $f(n) = 3n/2 - 3/2$.",
+      "D": "The recurrent case is $f(n) = 2(n - 1)$.",
+      "E": "The worst case is $f(n) = 1$."
+    },
+    "correct_option": "A",
+    "correct_answer_en": "The average case is $f(n) = (n + 1)/2$.",
+    "explanation_en": "In a successful sequential search with equally likely positions, the expected number of inspected records is the average of $1$ through $n$, which is $(n + 1)/2$."
+  },
+  {
+    "id": "ada01_2024_q22",
+    "category_id": "01",
+    "category": "Algorithm Analysis and Complexity",
+    "source": "POSCOMP 2024 Q22",
+    "pdf_page": 578,
+    "question_en": "What is the objective of asymptotic algorithm analysis?",
+    "choices": {
+      "A": "To jointly analyze the worst case and the average case.",
+      "B": "To analyze performance only for very small inputs.",
+      "C": "To determine performance for every possible input exactly.",
+      "D": "To analyze performance for medium-sized inputs.",
+      "E": "To analyze behavior as the input size grows indefinitely."
+    },
+    "correct_option": "E",
+    "correct_answer_en": "To analyze behavior as the input size grows indefinitely.",
+    "explanation_en": "Asymptotic analysis studies how resource usage grows as input size tends to infinity, ignoring constant factors and lower-order terms."
+  },
+  {
+    "id": "ada01_2024_q23",
+    "category_id": "01",
+    "category": "Algorithm Analysis and Complexity",
+    "source": "POSCOMP 2024 Q23",
+    "pdf_page": 578,
+    "question_en": "What are the average-case and worst-case search complexities in a hash table, respectively?",
+    "choices": {
+      "A": "$O(1)$ and $O(1)$.",
+      "B": "$O(1)$ and $O(n)$.",
+      "C": "$O(\\log n)$ and $O(\\log n)$.",
+      "D": "$O(\\log n)$ and $O(n)$.",
+      "E": "$O(n)$ and $O(2^n)$."
+    },
+    "correct_option": "B",
+    "correct_answer_en": "$O(1)$ and $O(n)$.",
+    "explanation_en": "With a good hash function and controlled load factor, average search is constant time. In the worst case, many keys collide and search can degrade to linear time."
+  },
+  {
+    "id": "ada01_2023_q21",
+    "category_id": "01",
+    "category": "Algorithm Analysis and Complexity",
+    "source": "POSCOMP 2023 Q21",
+    "pdf_page": 558,
+    "question_en": "Which statement about algorithm complexity is correct?",
+    "choices": {
+      "A": "Space complexity is measured by the number of operation executions.",
+      "B": "Time complexity measures the amount of memory required.",
+      "C": "Average complexity is the growth for sufficiently large inputs.",
+      "D": "Asymptotic complexity is the expected average over input probabilities.",
+      "E": "Pessimistic complexity describes worst-case performance over inputs of size $n$."
+    },
+    "correct_option": "E",
+    "correct_answer_en": "Pessimistic complexity describes worst-case performance over inputs of size $n$.",
+    "explanation_en": "Pessimistic complexity is worst-case complexity: the maximum resource usage among all inputs of a fixed size $n$."
+  },
+  {
+    "id": "ada01_2023_q23",
+    "category_id": "01",
+    "category": "Algorithm Analysis and Complexity",
+    "source": "POSCOMP 2023 Q23",
+    "pdf_page": 558,
+    "question_en": "Consider two nested loops: the outer loop runs $n$ times and the inner loop runs $m$ times, with $O(1)$ work inside. What is the asymptotic complexity?",
+    "choices": {
+      "A": "$O(n)$ if m is constant, and $O(m)$ if n is constant.",
+      "B": "$O(n \\log m)$ if m is constant, and $O(m \\log n)$ if n is constant.",
+      "C": "$O(n + m)$ if n and m have the same size.",
+      "D": "$O(1)$ in all cases.",
+      "E": "$O(nm)$ in all cases."
+    },
+    "correct_option": "E",
+    "correct_answer_en": "$O(nm)$ in all cases.",
+    "explanation_en": "The inner constant-time work is executed once for every pair (i, j), so the total number of executions is $n \times m$."
+  },
+  {
+    "id": "ada01_2022_q25",
+    "category_id": "01",
+    "category": "Algorithm Analysis and Complexity",
+    "source": "POSCOMP 2022 Q25",
+    "pdf_page": 540,
+    "question_en": "How is the running time of a recursive algorithm commonly analyzed?",
+    "choices": {
+      "A": "By a recurrence equation that constrains the running time.",
+      "B": "By a logarithm that becomes equal powers at each recursive call.",
+      "C": "By a randomization function over all call outcomes.",
+      "D": "By a random variable mapping call results to real numbers.",
+      "E": "Only by summations."
+    },
+    "correct_option": "A",
+    "correct_answer_en": "By a recurrence equation that constrains the running time.",
+    "explanation_en": "Recursive algorithms are naturally modeled by recurrences because the cost depends on the cost of smaller recursive calls plus non-recursive work."
+  }
+]

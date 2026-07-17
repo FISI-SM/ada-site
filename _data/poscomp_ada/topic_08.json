@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ada08_2019_q40",
+    "category_id": "08",
+    "category": "P, NP, and NP-Complete Problems",
+    "source": "POSCOMP 2019 Q40",
+    "pdf_page": 523,
+    "question_en": "Which statements about complexity classes are correct? I. The graph path decision problem CAM is in P. II. A problem X is NP-complete if X is in NP and every problem in NP reduces to X in polynomial time. III. If a decision problem X is in P, then its complement is in NP.",
+    "choices": {
+      "A": "Only I",
+      "B": "Only II",
+      "C": "Only I and II",
+      "D": "Only II and III",
+      "E": "I, II, and III"
+    },
+    "correct_option": "E",
+    "correct_answer_en": "I, II, and III",
+    "explanation_en": "Reachability is decidable in polynomial time, the NP-complete definition is correct, and P is closed under complement; therefore the complement is also in P and hence in NP."
+  },
+  {
+    "id": "ada08_2008_q17",
+    "category_id": "08",
+    "category": "P, NP, and NP-Complete Problems",
+    "source": "POSCOMP 2008 Q17",
+    "pdf_page": 190,
+    "question_en": "Which statements about decision problems and NP-completeness are correct? I. Decision problems ask yes/no questions, while location and optimization problems ask for structures or optimal structures. II. NP-completeness is studied through decision problems. III. NP-complete problems are among the hardest problems in NP, and a polynomial-time algorithm for one NP-complete problem would imply polynomial-time algorithms for all problems in NP.",
+    "choices": {
+      "A": "Only I",
+      "B": "Only II",
+      "C": "Only III",
+      "D": "Only I and III",
+      "E": "All statements are correct"
+    },
+    "correct_option": "E",
+    "correct_answer_en": "All statements are correct",
+    "explanation_en": "The statements match the standard framing of NP-completeness: it is defined for decision problems, and polynomially solving one NP-complete problem would solve all NP problems in polynomial time."
+  },
+  {
+    "id": "ada08_2024_q37",
+    "category_id": "08",
+    "category": "P, NP, and NP-Complete Problems",
+    "source": "POSCOMP 2024 Q37",
+    "pdf_page": 582,
+    "question_en": "Which statements about formal languages, automata, computability, and NP-completeness are correct?",
+    "choices": {
+      "A": "Only I and II",
+      "B": "Only II and III",
+      "C": "Only I and IV",
+      "D": "Only I, II, and IV",
+      "E": "Only III and IV"
+    },
+    "correct_option": "E",
+    "correct_answer_en": "Only III and IV",
+    "explanation_en": "The official key marks III and IV. The NP-related point is that NP-complete problems are a subset of NP."
+  }
+]

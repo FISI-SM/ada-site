@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ada07_2008_q18",
+    "category_id": "07",
+    "category": "Dynamic Programming",
+    "source": "POSCOMP 2008 Q18",
+    "pdf_page": 190,
+    "question_en": "Which statements about dynamic programming, divide and conquer, and greedy algorithms are true?",
+    "choices": {
+      "A": "Only statement I is true.",
+      "B": "Only statement II is true.",
+      "C": "Only statements I and II are true.",
+      "D": "Only statements II and III are true.",
+      "E": "All statements are true."
+    },
+    "correct_option": "C",
+    "correct_answer_en": "Only statements I and II are true.",
+    "explanation_en": "The dynamic-programming statement is true because it solves small subproblems, stores partial solutions, and combines them to solve larger problems."
+  },
+  {
+    "id": "ada07_2022_q21",
+    "category_id": "07",
+    "category": "Dynamic Programming",
+    "source": "POSCOMP 2022 Q21",
+    "pdf_page": 539,
+    "question_en": "MergeSort, Kruskal's minimum spanning tree algorithm, and Floyd-Warshall are examples of which algorithmic paradigms, respectively?",
+    "choices": {
+      "A": "Greedy, dynamic programming, divide and conquer",
+      "B": "Divide and conquer, dynamic programming, greedy",
+      "C": "Greedy, divide and conquer, dynamic programming",
+      "D": "Dynamic programming, divide and conquer, greedy",
+      "E": "Divide and conquer, greedy, dynamic programming"
+    },
+    "correct_option": "E",
+    "correct_answer_en": "Divide and conquer, greedy, dynamic programming",
+    "explanation_en": "Floyd-Warshall is dynamic programming because it builds shortest-path solutions by progressively allowing more intermediate vertices."
+  },
+  {
+    "id": "ada07_2013_q39",
+    "category_id": "07",
+    "category": "Dynamic Programming",
+    "source": "POSCOMP 2013 Q39",
+    "pdf_page": 350,
+    "question_en": "Which statements about algorithm analysis are correct? I. Dynamic programming can make some exponential recursive algorithms efficient. II. Trial-and-error algorithms are impractical with recursion because they are exhaustive. III. Recursive algorithms always run faster than iterative versions. IV. Binary search trees are suitable for recursive problems.",
+    "choices": {
+      "A": "Only I and II are correct.",
+      "B": "Only I and IV are correct.",
+      "C": "Only II and III are correct.",
+      "D": "Only III and IV are correct.",
+      "E": "All statements are correct."
+    },
+    "correct_option": "B",
+    "correct_answer_en": "Only I and IV are correct.",
+    "explanation_en": "Dynamic programming can avoid repeated recursive work, and binary trees naturally support recursive processing. Recursion is not automatically faster, and trial-and-error is not universally impractical."
+  },
+  {
+    "id": "ada07_2014_q37",
+    "category_id": "07",
+    "category": "Dynamic Programming",
+    "source": "POSCOMP 2014 Q37",
+    "pdf_page": 373,
+    "question_en": "Which algorithm is commonly used to compute shortest paths between all pairs of vertices and is based on dynamic programming?",
+    "choices": {
+      "A": "Bellman-Ford",
+      "B": "Floyd-Warshall",
+      "C": "Dijkstra",
+      "D": "Kruskal",
+      "E": "Prim"
+    },
+    "correct_option": "B",
+    "correct_answer_en": "Floyd-Warshall",
+    "explanation_en": "Floyd-Warshall uses a dynamic-programming recurrence over allowed intermediate vertices to compute all-pairs shortest paths."
+  }
+]

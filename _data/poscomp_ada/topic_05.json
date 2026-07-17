@@ -1,0 +1,128 @@
+[
+  {
+    "id": "ada05_2008_q18",
+    "category_id": "05",
+    "category": "Greedy Algorithms",
+    "source": "POSCOMP 2008 Q18",
+    "pdf_page": 190,
+    "question_en": "Which statements about dynamic programming, divide and conquer, and greedy algorithms are true?",
+    "choices": {
+      "A": "Only statement I is true.",
+      "B": "Only statement II is true.",
+      "C": "Only statements I and II are true.",
+      "D": "Only statements II and III are true.",
+      "E": "All statements are true."
+    },
+    "correct_option": "C",
+    "correct_answer_en": "Only statements I and II are true.",
+    "explanation_en": "The greedy statement is false because ideal greedy problems do have optimal substructure; dynamic programming and divide-and-conquer are described correctly."
+  },
+  {
+    "id": "ada05_2022_q21",
+    "category_id": "05",
+    "category": "Greedy Algorithms",
+    "source": "POSCOMP 2022 Q21",
+    "pdf_page": 539,
+    "question_en": "MergeSort, Kruskal's minimum spanning tree algorithm, and Floyd-Warshall are examples of which algorithmic paradigms, respectively?",
+    "choices": {
+      "A": "Greedy, dynamic programming, divide and conquer",
+      "B": "Divide and conquer, dynamic programming, greedy",
+      "C": "Greedy, divide and conquer, dynamic programming",
+      "D": "Dynamic programming, divide and conquer, greedy",
+      "E": "Divide and conquer, greedy, dynamic programming"
+    },
+    "correct_option": "E",
+    "correct_answer_en": "Divide and conquer, greedy, dynamic programming",
+    "explanation_en": "Kruskal is greedy because it repeatedly chooses the next lightest safe edge."
+  },
+  {
+    "id": "ada05_2014_q21",
+    "category_id": "05",
+    "category": "Greedy Algorithms",
+    "source": "POSCOMP 2014 Q21",
+    "pdf_page": 369,
+    "question_en": "A pseudocode algorithm builds a solution by repeatedly making the locally best viable choice. Which paradigm does it use?",
+    "choices": {
+      "A": "Backtracking",
+      "B": "Dynamic programming",
+      "C": "Greedy",
+      "D": "Divide and conquer",
+      "E": "Brute force"
+    },
+    "correct_option": "C",
+    "correct_answer_en": "Greedy",
+    "explanation_en": "Greedy algorithms construct solutions step by step using locally optimal choices."
+  },
+  {
+    "id": "ada05_2016_q25",
+    "category_id": "05",
+    "category": "Greedy Algorithms",
+    "source": "POSCOMP 2016 Q25",
+    "pdf_page": 421,
+    "question_en": "Match these algorithm-design paradigms to their descriptions: trial and error, divide and conquer, greedy, approximation, and heuristic. Which ordering is correct?",
+    "choices": {
+      "A": "1 - 2 - 3 - 4 - 5",
+      "B": "2 - 1 - 3 - 5 - 4",
+      "C": "3 - 2 - 1 - 4 - 5",
+      "D": "1 - 3 - 2 - 5 - 4",
+      "E": "5 - 4 - 3 - 2 - 1"
+    },
+    "correct_option": "A",
+    "correct_answer_en": "1 - 2 - 3 - 4 - 5",
+    "explanation_en": "The greedy description is the one that selects the best feasible element at each step; the official matching preserves the listed order."
+  },
+  {
+    "id": "ada05_2018_q29",
+    "category_id": "05",
+    "category": "Greedy Algorithms",
+    "source": "POSCOMP 2018 Q29",
+    "pdf_page": 495,
+    "question_en": "Which statements about Huffman compression are correct? I. It is more efficient for text compression than run-length encoding in typical text cases. II. It requires a bitstream and an externally supplied prefix-free code as input. III. The compressed representation must allow the code used for compression to be recovered.",
+    "choices": {
+      "A": "Only I",
+      "B": "Only II",
+      "C": "Only III",
+      "D": "Only II and III",
+      "E": "Only I and III"
+    },
+    "correct_option": "E",
+    "correct_answer_en": "Only I and III",
+    "explanation_en": "Huffman coding builds a prefix code from symbol frequencies; the code or enough information to reconstruct it must be available for decoding. It is generally better suited to text than RLE."
+  },
+  {
+    "id": "ada05_2009_q42",
+    "category_id": "05",
+    "category": "Greedy Algorithms",
+    "source": "POSCOMP 2009 Q42",
+    "pdf_page": 238,
+    "question_en": "Given symbol frequencies a=20, b=10, c=8, d=5, e=4, f=2, how many bits are needed to encode the string using a Huffman code?",
+    "choices": {
+      "A": "98",
+      "B": "105",
+      "C": "113",
+      "D": "120",
+      "E": "128"
+    },
+    "correct_option": "C",
+    "correct_answer_en": "113",
+    "explanation_en": "Huffman coding repeatedly combines the two least frequent symbols, producing variable-length prefix codes. Applying the Huffman tree to the given frequencies yields total cost 113 bits."
+  },
+  {
+    "id": "ada05_2022_q26",
+    "category_id": "05",
+    "category": "Greedy Algorithms",
+    "source": "POSCOMP 2022 Q26",
+    "pdf_page": 540,
+    "question_en": "Which text-compression method assigns shorter codes to high-frequency symbols and a unique code to each distinct symbol?",
+    "choices": {
+      "A": "Huffman",
+      "B": "Run-length encoding",
+      "C": "LZW",
+      "D": "Arithmetic mean coding",
+      "E": "Parity coding"
+    },
+    "correct_option": "A",
+    "correct_answer_en": "Huffman",
+    "explanation_en": "Huffman coding greedily builds an optimal prefix code by assigning shorter codewords to more frequent symbols."
+  }
+]
