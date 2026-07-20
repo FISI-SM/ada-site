@@ -9,10 +9,9 @@
       icon: quiz
       source: By topic
 
-- heading: Past Exams
-  weight: 30%
+- heading: Past Exams 
   description: Solve each question by clearly demonstrating how the solution is obtained. Then, perform a complete complexity analysis of your proposed solution, including its time complexity using O(g(n)) notation.
   items:
     - title: Partial and Final Exams
-      url: https://drive.google.com/drive/folders/1JfhlHNohQCLp3pOFOZJv2TUICHLRTLPo?usp=sharing
+      url: https://docs.google.com/document/d/1q6OU2z834kwf2lxQEF9ItSntNzUWSGtv3UI4Gh4ja0I/edit?tab=t.by0u34j416di
       icon: quiz
